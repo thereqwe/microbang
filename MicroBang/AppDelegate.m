@@ -9,14 +9,33 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+{
+    MBBaseNavigationController *NearNavi;
+    MBBaseNavigationController *ActivityNavi;
+    MBBaseNavigationController *MessageNavi;
+    MBBaseNavigationController *PersonalNavi;
+}
 
 @end
 
 @implementation AppDelegate
 
+- (void)setupUI {
+    UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    window.backgroundColor = [UIColor whiteColor];
+    self.window = window;
+    NearNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    window.rootViewController = baseNavigationController;
+    
+    
+    
+    
+    
+    [self.window makeKeyAndVisible];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self setupUI];
     return YES;
 }
 

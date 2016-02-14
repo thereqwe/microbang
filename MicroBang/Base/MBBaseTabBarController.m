@@ -1,23 +1,22 @@
 //
-//  MBBaseNavigationController.m
+//  MBBaseTabBarController.m
 //  MicroBang
 //
 //  Created by leon on 2016/二月/14.
 //  Copyright © 2016年 leon. All rights reserved.
 //
 
-#import "MBBaseNavigationController.h"
+#import "MBBaseTabBarController.h"
 
-@interface MBBaseNavigationController ()
+@interface MBBaseTabBarController ()
 
 @end
 
-@implementation MBBaseNavigationController
+@implementation MBBaseTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavigationBarHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {

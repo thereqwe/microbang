@@ -15,6 +15,7 @@
 		355BBDF81C701AEE000CD082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BBDF61C701AEE000CD082 /* LaunchScreen.storyboard */; };
 		355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE051C701F63000CD082 /* MBBaseViewController.m */; };
 		355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */; };
+		355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE0C1C7025EE000CD082 /* MBBaseTabBarController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,9 @@
 		355BBE051C701F63000CD082 /* MBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseViewController.m; sourceTree = "<group>"; };
 		355BBE071C701FD9000CD082 /* MBBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseNavigationController.h; sourceTree = "<group>"; };
 		355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseNavigationController.m; sourceTree = "<group>"; };
+		355BBE0A1C70234A000CD082 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		355BBE0B1C7025EE000CD082 /* MBBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseTabBarController.h; sourceTree = "<group>"; };
+		355BBE0C1C7025EE000CD082 /* MBBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseTabBarController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 				355BBE021C701F08000CD082 /* ViewControllers */,
 				355BBDEB1C701AEE000CD082 /* AppDelegate.h */,
 				355BBDEC1C701AEE000CD082 /* AppDelegate.m */,
+				355BBE0A1C70234A000CD082 /* PrefixHeader.pch */,
 				355BBDEE1C701AEE000CD082 /* ViewController.h */,
 				355BBDEF1C701AEE000CD082 /* ViewController.m */,
 				355BBDF11C701AEE000CD082 /* Main.storyboard */,
@@ -114,6 +119,10 @@
 		355BBE021C701F08000CD082 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				355BBE0E1C702757000CD082 /* Activity */,
+				355BBE0F1C702757000CD082 /* Message */,
+				355BBE101C702757000CD082 /* Near */,
+				355BBE111C702757000CD082 /* Personal */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -125,8 +134,38 @@
 				355BBE051C701F63000CD082 /* MBBaseViewController.m */,
 				355BBE071C701FD9000CD082 /* MBBaseNavigationController.h */,
 				355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */,
+				355BBE0B1C7025EE000CD082 /* MBBaseTabBarController.h */,
+				355BBE0C1C7025EE000CD082 /* MBBaseTabBarController.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		355BBE0E1C702757000CD082 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		355BBE0F1C702757000CD082 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		355BBE101C702757000CD082 /* Near */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Near;
+			sourceTree = "<group>";
+		};
+		355BBE111C702757000CD082 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Personal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +244,7 @@
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
+				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +354,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MicroBang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leon.microbang.MicroBang;
@@ -325,6 +367,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MicroBang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leon.microbang.MicroBang;
