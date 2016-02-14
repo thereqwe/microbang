@@ -14,6 +14,7 @@
     MBBaseNavigationController *ActivityNavi;
     MBBaseNavigationController *MessageNavi;
     MBBaseNavigationController *PersonalNavi;
+    MBBaseTabBarController     *baseTabBar;
 }
 
 @end
@@ -24,13 +25,18 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     window.backgroundColor = [UIColor whiteColor];
     self.window = window;
+    //4 section
     NearNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
-    window.rootViewController = baseNavigationController;
-    
-    
-    
-    
-    
+    [NearNavi setTitle:@"附近"];
+    ActivityNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    [ActivityNavi setTitle:@"活动"];
+    MessageNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    [MessageNavi setTitle:@"消息"];
+    PersonalNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    [PersonalNavi setTitle:@"个人"];
+    baseTabBar = [[MBBaseTabBarController alloc]init];
+    [baseTabBar setViewControllers:@[NearNavi,ActivityNavi,MessageNavi,PersonalNavi]];
+    window.rootViewController = baseTabBar;
     [self.window makeKeyAndVisible];
 }
 
