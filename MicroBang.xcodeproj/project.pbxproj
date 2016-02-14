@@ -13,6 +13,8 @@
 		355BBDF31C701AEE000CD082 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BBDF11C701AEE000CD082 /* Main.storyboard */; };
 		355BBDF51C701AEE000CD082 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 355BBDF41C701AEE000CD082 /* Assets.xcassets */; };
 		355BBDF81C701AEE000CD082 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 355BBDF61C701AEE000CD082 /* LaunchScreen.storyboard */; };
+		355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE051C701F63000CD082 /* MBBaseViewController.m */; };
+		355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		355BBDF41C701AEE000CD082 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		355BBDF71C701AEE000CD082 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		355BBDF91C701AEE000CD082 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		355BBE041C701F63000CD082 /* MBBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseViewController.h; sourceTree = "<group>"; };
+		355BBE051C701F63000CD082 /* MBBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseViewController.m; sourceTree = "<group>"; };
+		355BBE071C701FD9000CD082 /* MBBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseNavigationController.h; sourceTree = "<group>"; };
+		355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,11 @@
 		355BBDE71C701AEE000CD082 /* MicroBang */ = {
 			isa = PBXGroup;
 			children = (
+				355BBE031C701F2B000CD082 /* Base */,
+				355BBDFF1C701F08000CD082 /* Image */,
+				355BBE001C701F08000CD082 /* Util */,
+				355BBE011C701F08000CD082 /* Vendors */,
+				355BBE021C701F08000CD082 /* ViewControllers */,
 				355BBDEB1C701AEE000CD082 /* AppDelegate.h */,
 				355BBDEC1C701AEE000CD082 /* AppDelegate.m */,
 				355BBDEE1C701AEE000CD082 /* ViewController.h */,
@@ -77,6 +88,45 @@
 				355BBDE91C701AEE000CD082 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		355BBDFF1C701F08000CD082 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		355BBE001C701F08000CD082 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		355BBE011C701F08000CD082 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		355BBE021C701F08000CD082 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		355BBE031C701F2B000CD082 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				355BBE041C701F63000CD082 /* MBBaseViewController.h */,
+				355BBE051C701F63000CD082 /* MBBaseViewController.m */,
+				355BBE071C701FD9000CD082 /* MBBaseNavigationController.h */,
+				355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +202,9 @@
 			files = (
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
+				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
+				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +351,7 @@
 				355BBDFE1C701AEE000CD082 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
