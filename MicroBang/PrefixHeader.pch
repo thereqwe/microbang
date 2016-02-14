@@ -17,6 +17,8 @@
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 
 #define kGlobalNaviHeight 64
+#define kGlobalCellHeight 50
+#define KGlobalSmallMargin 8
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
