@@ -10,8 +10,8 @@
 
 @interface MBNearListViewController ()
 {
-    UITableView * ui_table_people;
-    
+    UITableView   *ui_table_people;
+    MBBaseNaviBar *ui_bar_top;
 }
 @end
 
@@ -19,22 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupUI {
+    WS(ws);
+    ui_table_people = [UITableView new];
+    [self.view addSubview:ui_table_people];
+    [ui_table_people mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.bottom.right.equalTo(ws.view).with.insets(UIEdgeInsetsMake(kGlobalNaviHeight, 0, 0, 0));
+    }];
+    ui_bar_top = [MBBaseNaviBar new];
+    [self.view addSubview:ui_bar_top];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

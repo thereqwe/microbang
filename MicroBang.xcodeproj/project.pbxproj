@@ -93,6 +93,7 @@
 		355BBDE71C701AEE000CD082 /* MicroBang */ = {
 			isa = PBXGroup;
 			children = (
+				355BBE1D1C7051D1000CD082 /* Cell */,
 				355BBE031C701F2B000CD082 /* Base */,
 				355BBDFF1C701F08000CD082 /* Image */,
 				355BBE001C701F08000CD082 /* Util */,
@@ -100,13 +101,13 @@
 				355BBE021C701F08000CD082 /* ViewControllers */,
 				355BBDEB1C701AEE000CD082 /* AppDelegate.h */,
 				355BBDEC1C701AEE000CD082 /* AppDelegate.m */,
-				355BBE0A1C70234A000CD082 /* PrefixHeader.pch */,
 				355BBDEE1C701AEE000CD082 /* ViewController.h */,
 				355BBDEF1C701AEE000CD082 /* ViewController.m */,
 				355BBDF11C701AEE000CD082 /* Main.storyboard */,
 				355BBDF41C701AEE000CD082 /* Assets.xcassets */,
 				355BBDF61C701AEE000CD082 /* LaunchScreen.storyboard */,
 				355BBDF91C701AEE000CD082 /* Info.plist */,
+				355BBE0A1C70234A000CD082 /* PrefixHeader.pch */,
 				355BBDE81C701AEE000CD082 /* Supporting Files */,
 			);
 			path = MicroBang;
@@ -197,6 +198,13 @@
 			children = (
 			);
 			path = Personal;
+			sourceTree = "<group>";
+		};
+		355BBE1D1C7051D1000CD082 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		64F33B477441DD84C6A19076 /* Frameworks */ = {

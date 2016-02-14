@@ -8,10 +8,18 @@
 #import "MBBaseViewController.h"
 #import "MBBaseNavigationController.h"
 #import "MBBaseTabBarController.h"
+#import <AFNetworking/AFNetworking.h>
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "MBBaseNaviBar.h"
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define kGlobalNaviHeight 64
+
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
-
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
 #endif /* PrefixHeader_pch */

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "MBNearListViewController.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -26,7 +26,7 @@
     window.backgroundColor = [UIColor whiteColor];
     self.window = window;
     //4 section
-    NearNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    NearNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBNearListViewController new]];
     [NearNavi setTitle:@"附近"];
     ActivityNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
     [ActivityNavi setTitle:@"活动"];

@@ -5,5 +5,9 @@
 
 target 'MicroBang' do
 pod ‘AFNetworking‘
+pod ‘SDWebImage‘
+pod ‘MJRefresh‘
+pod ‘AMap2DMap‘
+pod ‘Masonry‘
 end
 

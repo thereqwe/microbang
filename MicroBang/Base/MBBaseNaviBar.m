@@ -9,12 +9,14 @@
 #import "MBBaseNaviBar.h"
 
 @implementation MBBaseNaviBar
-- (instancetype)initWithFrame:(CGRect)frame
+- (void)didMoveToSuperview
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-    }
-    return self;
+   [super didMoveToSuperview];
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(0);
+        make.height.mas_equalTo(kGlobalNaviHeight);
+        make.top.mas_equalTo(0);
+    }];
+    self.backgroundColor = [UIColor grayColor];
 }
 @end
