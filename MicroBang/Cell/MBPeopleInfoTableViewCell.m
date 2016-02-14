@@ -17,8 +17,8 @@
     UIImageView *ui_img_sex; //红女蓝男
 }
 
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier{
+    self = [super initWithStyle:(UITableViewCellStyle)style reuseIdentifier:reuseIdentifier];
     if (self) {
         [self setupUI];
     }
@@ -27,17 +27,27 @@
 
 - (void)setupDataWithDict:(NSDictionary*)dict {
     [ui_img_avatar setImage:[UIImage imageNamed:@"bb.jpg"]];
+    ui_label_nickName.text = @"天才小火枪";
 }
 
 - (void)setupUI {
     WS(ws);
     ui_img_avatar = [UIImageView new];
+    ui_img_avatar.layer.cornerRadius = 10;
+    ui_img_avatar.layer.masksToBounds = YES;
     [self addSubview:ui_img_avatar];
     [ui_img_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(30);
-        make.height.mas_equalTo(30);
+        make.width.mas_equalTo(60);
+        make.height.mas_equalTo(60);
         make.centerY.equalTo(ws.mas_centerY);
-        make.left.mas_equalTo(KGlobalSmallMargin);
+        make.left.mas_equalTo(KGlobalSmallMargin*2);
+    }];
+    ui_label_nickName = [UILabel new];
+    [self addSubview:ui_label_nickName];
+    [ui_label_nickName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(15);
+        make.left.equalTo(ui_img_avatar.mas_right).offset(8);
+        make.right.mas_equalTo(-8);
     }];
 }
 @end

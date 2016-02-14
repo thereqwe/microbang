@@ -9,29 +9,49 @@
 #import "MBNearMapViewController.h"
 
 @interface MBNearMapViewController ()
-
+{
+    MAMapView *mapView;
+    UIButton * ui_btn_close;
+}
 @end
 
 @implementation MBNearMapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self setupUI];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.tabBarController.tabBar setHidden:YES];
+    self.edgesForExtendedLayout  = self.edgesForExtendedLayout = UIRectEdgeAll;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController.tabBarController.tabBar setHidden:NO];
 }
-*/
 
+- (void)setupUI {
+    mapView = [[MAMapView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds))];
+    mapView.delegate = self;
+    [self.view addSubview:mapView];
+
+    ui_btn_close = [UIButton new];
+    [ui_btn_close setTitleColor:themeBlue forState:UIControlStateNormal];
+    [ui_btn_close setTitle:@"关闭" forState:UIControlStateNormal];
+    [ui_btn_close addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:ui_btn_close];
+    [ui_btn_close mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(50);
+        make.height.mas_equalTo(50);
+        make.bottom.mas_equalTo(-30);
+        make.right.mas_equalTo(-8);
+    }];
+}
+
+- (void)close {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

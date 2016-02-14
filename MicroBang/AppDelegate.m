@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "MBNearListViewController.h"
+#import "MBActivityIndexViewController.h"
+#import "MBPersonIndexViewController.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -28,11 +30,11 @@
     //4 section
     NearNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBNearListViewController new]];
     [NearNavi setTitle:@"附近"];
-    ActivityNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
-    [ActivityNavi setTitle:@"活动"];
+    ActivityNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBActivityIndexViewController new]];
+    [ActivityNavi setTitle:@"发现"];
     MessageNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
     [MessageNavi setTitle:@"消息"];
-    PersonalNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    PersonalNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBPersonIndexViewController new]];
     [PersonalNavi setTitle:@"个人"];
     baseTabBar = [[MBBaseTabBarController alloc]init];
     [baseTabBar setViewControllers:@[NearNavi,ActivityNavi,MessageNavi,PersonalNavi]];
@@ -40,8 +42,13 @@
     [self.window makeKeyAndVisible];
 }
 
+- (void)setupEnv {
+    [MAMapServices sharedServices].apiKey = @"e590b8299c0475aaff1e3d58e3c22964";
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     [self setupUI];
+    [self setupEnv];
     return YES;
 }
 

@@ -1,5 +1,5 @@
 //
-//  MBNearMapViewController.h
+//  MBRecentSituationView.h
 //  MicroBang
 //
 //  Created by leon on 2016/二月/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBNearMapViewController : MBBaseViewController
+@interface MBRecentSituationView : UIView
 
 @end

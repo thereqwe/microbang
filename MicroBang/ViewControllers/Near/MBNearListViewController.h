@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBNearListViewController : UITabBarController
+@interface MBNearListViewController : MBBaseViewController
 
 @end

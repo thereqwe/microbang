@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBPeopleInfoTableViewCell : UITableViewCell
-
+- (void)setupDataWithDict:(NSDictionary*)dict;
 @end
