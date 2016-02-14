@@ -26,6 +26,8 @@
 		355BBE2C1C708950000CD082 /* MBRecentSituationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE2B1C708950000CD082 /* MBRecentSituationView.m */; };
 		355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE2E1C708AB4000CD082 /* MBRecentComeView.m */; };
 		355BBE321C708ADE000CD082 /* MBSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE311C708ADE000CD082 /* MBSetupView.m */; };
+		355BBE351C708F30000CD082 /* MBHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE341C708F30000CD082 /* MBHelpView.m */; };
+		355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		355BBE2E1C708AB4000CD082 /* MBRecentComeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentComeView.m; sourceTree = "<group>"; };
 		355BBE301C708ADE000CD082 /* MBSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSetupView.h; sourceTree = "<group>"; };
 		355BBE311C708ADE000CD082 /* MBSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSetupView.m; sourceTree = "<group>"; };
+		355BBE331C708F30000CD082 /* MBHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHelpView.h; sourceTree = "<group>"; };
+		355BBE341C708F30000CD082 /* MBHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHelpView.m; sourceTree = "<group>"; };
+		355BBE361C709220000CD082 /* MBRecentSituationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRecentSituationTableViewCell.h; sourceTree = "<group>"; };
+		355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentSituationTableViewCell.m; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -231,6 +237,8 @@
 			children = (
 				355BBE1E1C70532D000CD082 /* MBPeopleInfoTableViewCell.h */,
 				355BBE1F1C70532D000CD082 /* MBPeopleInfoTableViewCell.m */,
+				355BBE361C709220000CD082 /* MBRecentSituationTableViewCell.h */,
+				355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -244,6 +252,8 @@
 				355BBE2E1C708AB4000CD082 /* MBRecentComeView.m */,
 				355BBE301C708ADE000CD082 /* MBSetupView.h */,
 				355BBE311C708ADE000CD082 /* MBSetupView.m */,
+				355BBE331C708F30000CD082 /* MBHelpView.h */,
+				355BBE341C708F30000CD082 /* MBHelpView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -389,7 +399,9 @@
 				355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */,
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
 				355BBE2C1C708950000CD082 /* MBRecentSituationView.m in Sources */,
+				355BBE351C708F30000CD082 /* MBHelpView.m in Sources */,
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
+				355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
 				355BBE261C70732E000CD082 /* MBActivityIndexViewController.m in Sources */,
 				355BBE171C703384000CD082 /* MBNearMapViewController.m in Sources */,
