@@ -7,7 +7,7 @@
 //
 
 #import "MBActivityIndexViewController.h"
-
+#import "MBShakerViewController.h"
 @interface MBActivityIndexViewController ()
 <
 UITableViewDelegate,
@@ -52,7 +52,7 @@ UITableViewDataSource
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-   return [itemArr count];
+    return [itemArr count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -60,5 +60,12 @@ UITableViewDataSource
     [cell.textLabel setText:itemArr[indexPath.row]];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row==0) {
+        MBShakerViewController *vc = [MBShakerViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
 }
 @end

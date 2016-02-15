@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBSetupView : UIView
-
+<UITableViewDataSource,UITableViewDelegate>
 @end

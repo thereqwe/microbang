@@ -13,9 +13,11 @@
       UIButton  * ui_btn_title;
 }
 
-
 - (void)didMoveToSuperview
 {
+    if (self.superview==nil) {
+        return;
+    }
    [super didMoveToSuperview];
     [self mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.mas_equalTo(0);

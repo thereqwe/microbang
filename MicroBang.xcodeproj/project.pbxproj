@@ -28,6 +28,7 @@
 		355BBE321C708ADE000CD082 /* MBSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE311C708ADE000CD082 /* MBSetupView.m */; };
 		355BBE351C708F30000CD082 /* MBHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE341C708F30000CD082 /* MBHelpView.m */; };
 		355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */; };
+		355BBE3B1C71C595000CD082 /* MBShakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE3A1C71C595000CD082 /* MBShakerViewController.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,8 @@
 		355BBE341C708F30000CD082 /* MBHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHelpView.m; sourceTree = "<group>"; };
 		355BBE361C709220000CD082 /* MBRecentSituationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRecentSituationTableViewCell.h; sourceTree = "<group>"; };
 		355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentSituationTableViewCell.m; sourceTree = "<group>"; };
+		355BBE391C71C595000CD082 /* MBShakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBShakerViewController.h; sourceTree = "<group>"; };
+		355BBE3A1C71C595000CD082 /* MBShakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBShakerViewController.m; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,6 +204,8 @@
 			children = (
 				355BBE241C70732E000CD082 /* MBActivityIndexViewController.h */,
 				355BBE251C70732E000CD082 /* MBActivityIndexViewController.m */,
+				355BBE391C71C595000CD082 /* MBShakerViewController.h */,
+				355BBE3A1C71C595000CD082 /* MBShakerViewController.m */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				355BBE141C70334C000CD082 /* MBNearListViewController.m in Sources */,
 				355BBE1A1C703436000CD082 /* MBBaseNaviBar.m in Sources */,
 				355BBE201C70532D000CD082 /* MBPeopleInfoTableViewCell.m in Sources */,
+				355BBE3B1C71C595000CD082 /* MBShakerViewController.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
 				355BBE291C7080D2000CD082 /* MBPersonIndexViewController.m in Sources */,
 				355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */,

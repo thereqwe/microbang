@@ -14,6 +14,9 @@
 }
 
 -(void)didMoveToSuperview {
+    if (self.superview==nil) {
+        return;
+    }
     [self mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(100);
         make.left.right.bottom.mas_equalTo(0);
