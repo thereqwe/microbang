@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBRecentSituationTableViewCell : UITableViewCell
-
+- (void)setupDataWithDict:(NSDictionary*)dict;
 @end

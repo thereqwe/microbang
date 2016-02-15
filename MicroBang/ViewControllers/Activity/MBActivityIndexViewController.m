@@ -29,7 +29,7 @@ UITableViewDataSource
 }
 
 - (void)setupData {
-    itemArr = @[@"摇一摇",@"探一探"];
+    itemArr = @[@"摇一摇",@"探一探",@"瞅动态"];
 }
 
 - (void)setupUI {

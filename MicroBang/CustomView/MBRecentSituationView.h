@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBRecentSituationView : UIView
+@interface MBRecentSituationView : UIView<UITableViewDataSource,UITableViewDelegate>
 
 @end
