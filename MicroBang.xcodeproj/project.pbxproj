@@ -29,6 +29,14 @@
 		355BBE351C708F30000CD082 /* MBHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE341C708F30000CD082 /* MBHelpView.m */; };
 		355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */; };
 		355BBE3B1C71C595000CD082 /* MBShakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE3A1C71C595000CD082 /* MBShakerViewController.m */; };
+		355BBE3D1C71D563000CD082 /* bg_yaoyao_under.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */; };
+		355BBE3F1C71D571000CD082 /* bg_yaoyao_above.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE3E1C71D571000CD082 /* bg_yaoyao_above.png */; };
+		355BBE411C71D57C000CD082 /* bg_shaking.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE401C71D57C000CD082 /* bg_shaking.png */; };
+		355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE431C71D615000CD082 /* UIView+LZ.m */; };
+		355BBE491C71DA2A000CD082 /* Shake_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE451C71DA2A000CD082 /* Shake_01.png */; };
+		355BBE4A1C71DA2A000CD082 /* Shake_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE461C71DA2A000CD082 /* Shake_01@2x.png */; };
+		355BBE4B1C71DA2A000CD082 /* Shake_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE471C71DA2A000CD082 /* Shake_02.png */; };
+		355BBE4C1C71DA2A000CD082 /* Shake_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE481C71DA2A000CD082 /* Shake_02@2x.png */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +84,15 @@
 		355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentSituationTableViewCell.m; sourceTree = "<group>"; };
 		355BBE391C71C595000CD082 /* MBShakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBShakerViewController.h; sourceTree = "<group>"; };
 		355BBE3A1C71C595000CD082 /* MBShakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBShakerViewController.m; sourceTree = "<group>"; };
+		355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_yaoyao_under.png; sourceTree = "<group>"; };
+		355BBE3E1C71D571000CD082 /* bg_yaoyao_above.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_yaoyao_above.png; sourceTree = "<group>"; };
+		355BBE401C71D57C000CD082 /* bg_shaking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_shaking.png; sourceTree = "<group>"; };
+		355BBE421C71D615000CD082 /* UIView+LZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LZ.h"; sourceTree = "<group>"; };
+		355BBE431C71D615000CD082 /* UIView+LZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LZ.m"; sourceTree = "<group>"; };
+		355BBE451C71DA2A000CD082 /* Shake_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shake_01.png; sourceTree = "<group>"; };
+		355BBE461C71DA2A000CD082 /* Shake_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_01@2x.png"; sourceTree = "<group>"; };
+		355BBE471C71DA2A000CD082 /* Shake_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shake_02.png; sourceTree = "<group>"; };
+		355BBE481C71DA2A000CD082 /* Shake_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_02@2x.png"; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -154,7 +171,14 @@
 		355BBDFF1C701F08000CD082 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */,
+				355BBE401C71D57C000CD082 /* bg_shaking.png */,
+				355BBE3E1C71D571000CD082 /* bg_yaoyao_above.png */,
 				355BBE211C705902000CD082 /* bb.jpg */,
+				355BBE451C71DA2A000CD082 /* Shake_01.png */,
+				355BBE461C71DA2A000CD082 /* Shake_01@2x.png */,
+				355BBE471C71DA2A000CD082 /* Shake_02.png */,
+				355BBE481C71DA2A000CD082 /* Shake_02@2x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -162,6 +186,8 @@
 		355BBE001C701F08000CD082 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				355BBE421C71D615000CD082 /* UIView+LZ.h */,
+				355BBE431C71D615000CD082 /* UIView+LZ.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -332,10 +358,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355BBE411C71D57C000CD082 /* bg_shaking.png in Resources */,
 				355BBDF81C701AEE000CD082 /* LaunchScreen.storyboard in Resources */,
 				355BBDF51C701AEE000CD082 /* Assets.xcassets in Resources */,
+				355BBE491C71DA2A000CD082 /* Shake_01.png in Resources */,
+				355BBE3F1C71D571000CD082 /* bg_yaoyao_above.png in Resources */,
 				355BBE221C705902000CD082 /* bb.jpg in Resources */,
+				355BBE4C1C71DA2A000CD082 /* Shake_02@2x.png in Resources */,
+				355BBE4B1C71DA2A000CD082 /* Shake_02.png in Resources */,
 				355BBDF31C701AEE000CD082 /* Main.storyboard in Resources */,
+				355BBE3D1C71D563000CD082 /* bg_yaoyao_under.png in Resources */,
+				355BBE4A1C71DA2A000CD082 /* Shake_01@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */,
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
 				355BBE321C708ADE000CD082 /* MBSetupView.m in Sources */,
 				355BBE141C70334C000CD082 /* MBNearListViewController.m in Sources */,
