@@ -34,6 +34,8 @@ UITableViewDataSource
     ui_table_people = [UITableView new];
     ui_table_people.delegate = self;
     ui_table_people.dataSource = self;
+    ui_table_people.rowHeight = UITableViewAutomaticDimension;
+    ui_table_people.estimatedRowHeight = 44;
     [ui_table_people registerClass:[MBPeopleInfoTableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:ui_table_people];
     [ui_table_people mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -66,9 +68,7 @@ UITableViewDataSource
     return 20;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kGlobalCellHeight;
-}
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MBPeopleInfoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];

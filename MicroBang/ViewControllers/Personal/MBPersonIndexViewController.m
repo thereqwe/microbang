@@ -65,21 +65,34 @@ UITableViewDataSource
     if (idx==0) {
         if(ui_view_situation==nil){
          ui_view_situation = [MBRecentSituationView new];
+            [self.view addSubview:ui_view_situation];
+        }else{
+            [self.view bringSubviewToFront:ui_view_situation];
         }
-        [self.view addSubview:ui_view_situation];
+        
     }else if (idx==1){
         if(ui_view_come ==nil){
             ui_view_come = [MBRecentComeView new];
-        };
-        [self.view addSubview:ui_view_come];
+            [self.view addSubview:ui_view_come];
+        }else{
+            [self.view bringSubviewToFront:ui_view_come];
+        }
+        
     }else if (idx==2){
         if(ui_view_setup ==nil){
             ui_view_setup = [MBSetupView new];
-        };
-        [self.view addSubview:ui_view_setup];
+            [self.view addSubview:ui_view_setup];
+        }else{
+            [self.view bringSubviewToFront:ui_view_setup];
+        }
+        
     }else if (idx==3){
-        ui_view_help = [MBHelpView new];
-        [self.view addSubview:ui_view_help];
+        if(ui_view_help ==nil){
+            ui_view_help = [MBHelpView new];
+            [self.view addSubview:ui_view_help];
+        }else{
+            [self.view bringSubviewToFront:ui_view_help];
+        }
     }
 }
 

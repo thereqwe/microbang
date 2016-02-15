@@ -10,7 +10,8 @@
 
 @implementation MBSetupView
 {
-    UITableView *ui_table_situation;
+    UITableView *ui_table_setup;
+    NSArray *itemArr;
 }
 
 -(void)didMoveToSuperview {
@@ -21,4 +22,9 @@
     self.backgroundColor = [UIColor brownColor];
 }
 
+-(void)setupUI {
+    ui_table_setup = [UITableView new];
+    [self addSubview:ui_table_setup];
+    
+}
 @end

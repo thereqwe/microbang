@@ -49,6 +49,8 @@
 
 - (void)setupUI {
     ui_img_avatar = [UIImageView new];
+    ui_img_avatar.layer.cornerRadius = 10;
+    ui_img_avatar.layer.masksToBounds = YES;
     [self addSubview:ui_img_avatar];
     [ui_img_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(20);
@@ -79,7 +81,7 @@
     [ui_lb_article mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ui_img_avatar.mas_bottom).offset(20);
         make.left.mas_equalTo(20);
-        make.right.mas_equalTo(-20);
+        make.right.mas_equalTo(-8);
     }];
     
     ui_lb_commentNum = [UILabel new];
