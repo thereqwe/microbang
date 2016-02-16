@@ -24,6 +24,9 @@
 #define kGlobalCellHeight 80
 #define KGlobalSmallMargin 8
 
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
+
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 // Include any system framework and library headers here that should be included in all compilation units.
