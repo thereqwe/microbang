@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBPhotoView : UIView
-
+- (void)setupDataWithDict:(NSDictionary*)dict ;
 @end

@@ -7,11 +7,12 @@
 //
 
 #import "MBPhotoWallViewController.h"
-
+#import "MBPhotoView.h"
 @interface MBPhotoWallViewController ()
 {
     UIButton *ui_btn_like;
     UIButton *ui_btn_hate;
+    MBPhotoView *ui_photo_people;
 }
 @end
 
@@ -23,6 +24,11 @@
 }
 
 - (void)setupUI {
+    ui_photo_people = [MBPhotoView new];
+    ui_photo_people.frame = CGRectMake(8, kGlobalNaviHeight+8, kScreenWidth-16, 400);
+    [self.view addSubview:ui_photo_people];
+    [ui_photo_people setupDataWithDict:nil];
+    
     WS(ws);
     ui_btn_like = [UIButton new];
     [ui_btn_like setBackgroundColor:[UIColor redColor]];
@@ -45,8 +51,8 @@
     }];
     
     MBBaseNaviBar* navi = [MBBaseNaviBar new];
-    [self.view addSubview:navi];
     navi.title = @"探一探";
+    [self.view addSubview:navi];
 }
 
 @end

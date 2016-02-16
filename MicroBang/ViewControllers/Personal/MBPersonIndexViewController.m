@@ -51,7 +51,7 @@ UITableViewDataSource
     [self.view addSubview:ui_seg_item];
     [ui_seg_item mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(ws.view.mas_centerX);
-        make.top.mas_equalTo(kGlobalNaviHeight);
+        make.top.mas_equalTo(kGlobalNaviHeight+KGlobalSmallMargin);
         make.height.mas_equalTo(25);
         make.width.mas_equalTo(300);
     }];

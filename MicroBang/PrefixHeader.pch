@@ -18,7 +18,7 @@
 #import "UIView+LZ.h"
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #define RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
-#define themeWhite RGBA(250, 250, 250, 1)
+#define themeWhite RGBA(240, 240, 240, 1)
 #define themeBlue RGBA(49, 132, 252, 1)
 #define kGlobalNaviHeight 64
 #define kGlobalCellHeight 80
