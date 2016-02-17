@@ -39,6 +39,7 @@
 		355BBE4C1C71DA2A000CD082 /* Shake_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE481C71DA2A000CD082 /* Shake_02@2x.png */; };
 		355BBE4F1C72C381000CD082 /* MBPhotoWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */; };
 		355BBE521C72CDF0000CD082 /* MBPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE511C72CDF0000CD082 /* MBPhotoView.m */; };
+		35E00F891C743F29000D32C1 /* mega.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F881C743F29000D32C1 /* mega.jpg */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +100,7 @@
 		355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPhotoWallViewController.m; sourceTree = "<group>"; };
 		355BBE501C72CDF0000CD082 /* MBPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPhotoView.h; sourceTree = "<group>"; };
 		355BBE511C72CDF0000CD082 /* MBPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPhotoView.m; sourceTree = "<group>"; };
+		35E00F881C743F29000D32C1 /* mega.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mega.jpg; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -179,6 +181,7 @@
 			children = (
 				355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */,
 				355BBE401C71D57C000CD082 /* bg_shaking.png */,
+				35E00F881C743F29000D32C1 /* mega.jpg */,
 				355BBE3E1C71D571000CD082 /* bg_yaoyao_above.png */,
 				355BBE211C705902000CD082 /* bb.jpg */,
 				355BBE451C71DA2A000CD082 /* Shake_01.png */,
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				355BBE411C71D57C000CD082 /* bg_shaking.png in Resources */,
+				35E00F891C743F29000D32C1 /* mega.jpg in Resources */,
 				355BBDF81C701AEE000CD082 /* LaunchScreen.storyboard in Resources */,
 				355BBDF51C701AEE000CD082 /* Assets.xcassets in Resources */,
 				355BBE491C71DA2A000CD082 /* Shake_01.png in Resources */,

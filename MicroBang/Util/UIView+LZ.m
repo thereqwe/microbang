@@ -59,4 +59,20 @@
     return self.frame.size.height;
 }
 
+- (void)fadeOut {
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation new];
+    animation.keyPath = @"position";
+    CGFloat x = self.layer.position.x;
+    CGFloat y =self.layer.position.y;
+    animation.values = @[
+        [NSValue valueWithCGPoint:CGPointMake(x, y)],
+        [NSValue valueWithCGPoint:CGPointMake(x+50, y+50)],
+        [NSValue valueWithCGPoint:CGPointMake(x+500,y+500)]
+                         ];
+    animation.duration = 5.5;
+    [self.layer addAnimation:animation forKey:nil];
+}
+
+
+
 @end

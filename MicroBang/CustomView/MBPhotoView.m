@@ -31,7 +31,7 @@
 
 
 - (void)setupDataWithDict:(NSDictionary*)dict {
-     [ui_img_avatar setImage:[UIImage imageNamed:@"bb.jpg"]];
+     [ui_img_avatar setImage:[UIImage imageNamed:dict[@"img"]]];
      ui_lb_nickName.text = @"小甜甜";
      ui_lb_age.text = @"18";
      ui_lb_distance.text = @"13米";
