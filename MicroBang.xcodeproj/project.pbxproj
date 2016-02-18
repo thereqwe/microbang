@@ -40,12 +40,28 @@
 		355BBE4F1C72C381000CD082 /* MBPhotoWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */; };
 		355BBE521C72CDF0000CD082 /* MBPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE511C72CDF0000CD082 /* MBPhotoView.m */; };
 		35E00F891C743F29000D32C1 /* mega.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F881C743F29000D32C1 /* mega.jpg */; };
+		35E00F8C1C744E42000D32C1 /* MBSituationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00F8B1C744E42000D32C1 /* MBSituationViewController.m */; };
+		35E00F8F1C747A01000D32C1 /* MBSituationReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00F8E1C747A01000D32C1 /* MBSituationReplyViewController.m */; };
+		35E00F921C748B8D000D32C1 /* MBChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00F911C748B8D000D32C1 /* MBChatView.m */; };
+		35E00FA11C756394000D32C1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F941C756394000D32C1 /* Icon-72.png */; };
+		35E00FA21C756394000D32C1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F951C756394000D32C1 /* Icon-72@2x.png */; };
+		35E00FA31C756394000D32C1 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F961C756394000D32C1 /* Icon-76.png */; };
+		35E00FA41C756394000D32C1 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F971C756394000D32C1 /* Icon-76@2x.png */; };
+		35E00FA51C756394000D32C1 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F981C756394000D32C1 /* Icon-120.png */; };
+		35E00FA61C756394000D32C1 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F991C756394000D32C1 /* Icon-iPad-Spotlight-iOS7@2x.png */; };
+		35E00FA71C756394000D32C1 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9A1C756394000D32C1 /* Icon-Small-50.png */; };
+		35E00FA81C756394000D32C1 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9B1C756394000D32C1 /* Icon-Small.png */; };
+		35E00FA91C756394000D32C1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9C1C756394000D32C1 /* Icon-Small@2x.png */; };
+		35E00FAA1C756394000D32C1 /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9D1C756394000D32C1 /* Icon-Spotlight-iOS7.png */; };
+		35E00FAB1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9E1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png */; };
+		35E00FAC1C756394000D32C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9F1C756394000D32C1 /* Icon.png */; };
+		35E00FAD1C756394000D32C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00FA01C756394000D32C1 /* Icon@2x.png */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0578326EB56912D96F61DB52 /* libPods-MicroBang.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MicroBang.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		355BBDE51C701AEE000CD082 /* MicroBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MicroBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		355BBDE51C701AEE000CD082 /* 微泡.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "微泡.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		355BBDE91C701AEE000CD082 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		355BBDEB1C701AEE000CD082 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		355BBDEC1C701AEE000CD082 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,6 +117,25 @@
 		355BBE501C72CDF0000CD082 /* MBPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPhotoView.h; sourceTree = "<group>"; };
 		355BBE511C72CDF0000CD082 /* MBPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPhotoView.m; sourceTree = "<group>"; };
 		35E00F881C743F29000D32C1 /* mega.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mega.jpg; sourceTree = "<group>"; };
+		35E00F8A1C744E42000D32C1 /* MBSituationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSituationViewController.h; sourceTree = "<group>"; };
+		35E00F8B1C744E42000D32C1 /* MBSituationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSituationViewController.m; sourceTree = "<group>"; };
+		35E00F8D1C747A01000D32C1 /* MBSituationReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSituationReplyViewController.h; sourceTree = "<group>"; };
+		35E00F8E1C747A01000D32C1 /* MBSituationReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSituationReplyViewController.m; sourceTree = "<group>"; };
+		35E00F901C748B8D000D32C1 /* MBChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatView.h; sourceTree = "<group>"; };
+		35E00F911C748B8D000D32C1 /* MBChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatView.m; sourceTree = "<group>"; };
+		35E00F941C756394000D32C1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		35E00F951C756394000D32C1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		35E00F961C756394000D32C1 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		35E00F971C756394000D32C1 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		35E00F981C756394000D32C1 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		35E00F991C756394000D32C1 /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
+		35E00F9A1C756394000D32C1 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		35E00F9B1C756394000D32C1 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		35E00F9C1C756394000D32C1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		35E00F9D1C756394000D32C1 /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
+		35E00F9E1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
+		35E00F9F1C756394000D32C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		35E00FA01C756394000D32C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +174,7 @@
 		355BBDE61C701AEE000CD082 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				355BBDE51C701AEE000CD082 /* MicroBang.app */,
+				355BBDE51C701AEE000CD082 /* 微泡.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,6 +214,7 @@
 		355BBDFF1C701F08000CD082 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				35E00F931C756380000D32C1 /* icon */,
 				355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */,
 				355BBE401C71D57C000CD082 /* bg_shaking.png */,
 				35E00F881C743F29000D32C1 /* mega.jpg */,
@@ -243,6 +279,10 @@
 				355BBE3A1C71C595000CD082 /* MBShakerViewController.m */,
 				355BBE4D1C72C381000CD082 /* MBPhotoWallViewController.h */,
 				355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */,
+				35E00F8A1C744E42000D32C1 /* MBSituationViewController.h */,
+				35E00F8B1C744E42000D32C1 /* MBSituationViewController.m */,
+				35E00F8D1C747A01000D32C1 /* MBSituationReplyViewController.h */,
+				35E00F8E1C747A01000D32C1 /* MBSituationReplyViewController.m */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -298,8 +338,30 @@
 				355BBE341C708F30000CD082 /* MBHelpView.m */,
 				355BBE501C72CDF0000CD082 /* MBPhotoView.h */,
 				355BBE511C72CDF0000CD082 /* MBPhotoView.m */,
+				35E00F901C748B8D000D32C1 /* MBChatView.h */,
+				35E00F911C748B8D000D32C1 /* MBChatView.m */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		35E00F931C756380000D32C1 /* icon */ = {
+			isa = PBXGroup;
+			children = (
+				35E00F941C756394000D32C1 /* Icon-72.png */,
+				35E00F951C756394000D32C1 /* Icon-72@2x.png */,
+				35E00F961C756394000D32C1 /* Icon-76.png */,
+				35E00F971C756394000D32C1 /* Icon-76@2x.png */,
+				35E00F981C756394000D32C1 /* Icon-120.png */,
+				35E00F991C756394000D32C1 /* Icon-iPad-Spotlight-iOS7@2x.png */,
+				35E00F9A1C756394000D32C1 /* Icon-Small-50.png */,
+				35E00F9B1C756394000D32C1 /* Icon-Small.png */,
+				35E00F9C1C756394000D32C1 /* Icon-Small@2x.png */,
+				35E00F9D1C756394000D32C1 /* Icon-Spotlight-iOS7.png */,
+				35E00F9E1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png */,
+				35E00F9F1C756394000D32C1 /* Icon.png */,
+				35E00FA01C756394000D32C1 /* Icon@2x.png */,
+			);
+			path = icon;
 			sourceTree = "<group>";
 		};
 		64F33B477441DD84C6A19076 /* Frameworks */ = {
@@ -330,7 +392,7 @@
 			);
 			name = MicroBang;
 			productName = MicroBang;
-			productReference = 355BBDE51C701AEE000CD082 /* MicroBang.app */;
+			productReference = 355BBDE51C701AEE000CD082 /* 微泡.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -371,17 +433,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E00FAB1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				35E00FA71C756394000D32C1 /* Icon-Small-50.png in Resources */,
+				35E00FA61C756394000D32C1 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				35E00FA21C756394000D32C1 /* Icon-72@2x.png in Resources */,
 				355BBE411C71D57C000CD082 /* bg_shaking.png in Resources */,
+				35E00FA31C756394000D32C1 /* Icon-76.png in Resources */,
+				35E00FA51C756394000D32C1 /* Icon-120.png in Resources */,
+				35E00FA91C756394000D32C1 /* Icon-Small@2x.png in Resources */,
+				35E00FAA1C756394000D32C1 /* Icon-Spotlight-iOS7.png in Resources */,
 				35E00F891C743F29000D32C1 /* mega.jpg in Resources */,
 				355BBDF81C701AEE000CD082 /* LaunchScreen.storyboard in Resources */,
+				35E00FA81C756394000D32C1 /* Icon-Small.png in Resources */,
+				35E00FAC1C756394000D32C1 /* Icon.png in Resources */,
 				355BBDF51C701AEE000CD082 /* Assets.xcassets in Resources */,
 				355BBE491C71DA2A000CD082 /* Shake_01.png in Resources */,
 				355BBE3F1C71D571000CD082 /* bg_yaoyao_above.png in Resources */,
 				355BBE221C705902000CD082 /* bb.jpg in Resources */,
 				355BBE4C1C71DA2A000CD082 /* Shake_02@2x.png in Resources */,
 				355BBE4B1C71DA2A000CD082 /* Shake_02.png in Resources */,
+				35E00FAD1C756394000D32C1 /* Icon@2x.png in Resources */,
+				35E00FA11C756394000D32C1 /* Icon-72.png in Resources */,
 				355BBDF31C701AEE000CD082 /* Main.storyboard in Resources */,
 				355BBE3D1C71D563000CD082 /* bg_yaoyao_under.png in Resources */,
+				35E00FA41C756394000D32C1 /* Icon-76@2x.png in Resources */,
 				355BBE4A1C71DA2A000CD082 /* Shake_01@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -442,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */,
+				35E00F921C748B8D000D32C1 /* MBChatView.m in Sources */,
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
 				355BBE321C708ADE000CD082 /* MBSetupView.m in Sources */,
 				355BBE141C70334C000CD082 /* MBNearListViewController.m in Sources */,
@@ -452,6 +528,7 @@
 				355BBE291C7080D2000CD082 /* MBPersonIndexViewController.m in Sources */,
 				355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */,
 				355BBE521C72CDF0000CD082 /* MBPhotoView.m in Sources */,
+				35E00F8F1C747A01000D32C1 /* MBSituationReplyViewController.m in Sources */,
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
 				355BBE2C1C708950000CD082 /* MBRecentSituationView.m in Sources */,
 				355BBE351C708F30000CD082 /* MBHelpView.m in Sources */,
@@ -459,6 +536,7 @@
 				355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
 				355BBE261C70732E000CD082 /* MBActivityIndexViewController.m in Sources */,
+				35E00F8C1C744E42000D32C1 /* MBSituationViewController.m in Sources */,
 				355BBE171C703384000CD082 /* MBNearMapViewController.m in Sources */,
 				355BBE4F1C72C381000CD082 /* MBPhotoWallViewController.m in Sources */,
 				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
@@ -577,7 +655,7 @@
 				INFOPLIST_FILE = MicroBang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leon.microbang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微泡";
 			};
 			name = Debug;
 		};
@@ -591,7 +669,7 @@
 				INFOPLIST_FILE = MicroBang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.leon.microbang;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "微泡";
 			};
 			name = Release;
 		};

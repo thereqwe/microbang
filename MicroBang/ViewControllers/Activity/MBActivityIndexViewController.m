@@ -9,6 +9,7 @@
 #import "MBActivityIndexViewController.h"
 #import "MBShakerViewController.h"
 #import "MBPhotoWallViewController.h"
+#import "MBSituationViewController.h"
 @interface MBActivityIndexViewController ()
 <
 UITableViewDelegate,
@@ -69,6 +70,9 @@ UITableViewDataSource
         [self.navigationController pushViewController:vc animated:YES];
     }else if (indexPath.row==1) {
         MBPhotoWallViewController *vc = [MBPhotoWallViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }else if (indexPath.row==2) {
+        MBSituationViewController *vc = [MBSituationViewController new];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

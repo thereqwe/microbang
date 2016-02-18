@@ -116,4 +116,13 @@
         }];
     }];
 }
+
+#pragma mark- btn action
+- (void)doLike {
+    
+}
+
+- (void)doHate {
+    
+}
 @end

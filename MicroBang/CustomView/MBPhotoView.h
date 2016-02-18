@@ -9,6 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBPhotoView : UIView
-@property (nonatomic,assign)CGPoint originPositionPoint;
 - (void)setupDataWithDict:(NSDictionary*)dict ;
 @end
