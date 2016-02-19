@@ -56,6 +56,10 @@
 		35E00FAB1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9E1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png */; };
 		35E00FAC1C756394000D32C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9F1C756394000D32C1 /* Icon.png */; };
 		35E00FAD1C756394000D32C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00FA01C756394000D32C1 /* Icon@2x.png */; };
+		35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FBD1C76C6B1000D32C1 /* msgModel.m */; };
+		35E00FC11C76CAD8000D32C1 /* MBChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC01C76CAD8000D32C1 /* MBChatTableViewCell.m */; };
+		35E00FC41C770EC7000D32C1 /* MBMessageIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC31C770EC7000D32C1 /* MBMessageIndexViewController.m */; };
+		35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC91C771658000D32C1 /* UILabel+LZ.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -136,6 +140,14 @@
 		35E00F9E1C756394000D32C1 /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
 		35E00F9F1C756394000D32C1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		35E00FA01C756394000D32C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		35E00FBC1C76C6B1000D32C1 /* msgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgModel.h; sourceTree = "<group>"; };
+		35E00FBD1C76C6B1000D32C1 /* msgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msgModel.m; sourceTree = "<group>"; };
+		35E00FBF1C76CAD8000D32C1 /* MBChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatTableViewCell.h; sourceTree = "<group>"; };
+		35E00FC01C76CAD8000D32C1 /* MBChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatTableViewCell.m; sourceTree = "<group>"; };
+		35E00FC21C770EC7000D32C1 /* MBMessageIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMessageIndexViewController.h; sourceTree = "<group>"; };
+		35E00FC31C770EC7000D32C1 /* MBMessageIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMessageIndexViewController.m; sourceTree = "<group>"; };
+		35E00FC81C771658000D32C1 /* UILabel+LZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LZ.h"; sourceTree = "<group>"; };
+		35E00FC91C771658000D32C1 /* UILabel+LZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LZ.m"; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +194,7 @@
 		355BBDE71C701AEE000CD082 /* MicroBang */ = {
 			isa = PBXGroup;
 			children = (
+				35E00FBB1C76C68D000D32C1 /* Model */,
 				355BBE231C70644A000CD082 /* CustomView */,
 				355BBE1D1C7051D1000CD082 /* Cell */,
 				355BBE031C701F2B000CD082 /* Base */,
@@ -233,6 +246,8 @@
 			children = (
 				355BBE421C71D615000CD082 /* UIView+LZ.h */,
 				355BBE431C71D615000CD082 /* UIView+LZ.m */,
+				35E00FC81C771658000D32C1 /* UILabel+LZ.h */,
+				35E00FC91C771658000D32C1 /* UILabel+LZ.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -290,6 +305,8 @@
 		355BBE0F1C702757000CD082 /* Message */ = {
 			isa = PBXGroup;
 			children = (
+				35E00FC21C770EC7000D32C1 /* MBMessageIndexViewController.h */,
+				35E00FC31C770EC7000D32C1 /* MBMessageIndexViewController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -321,6 +338,8 @@
 				355BBE1F1C70532D000CD082 /* MBPeopleInfoTableViewCell.m */,
 				355BBE361C709220000CD082 /* MBRecentSituationTableViewCell.h */,
 				355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */,
+				35E00FBF1C76CAD8000D32C1 /* MBChatTableViewCell.h */,
+				35E00FC01C76CAD8000D32C1 /* MBChatTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -362,6 +381,15 @@
 				35E00FA01C756394000D32C1 /* Icon@2x.png */,
 			);
 			path = icon;
+			sourceTree = "<group>";
+		};
+		35E00FBB1C76C68D000D32C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35E00FBC1C76C6B1000D32C1 /* msgModel.h */,
+				35E00FBD1C76C6B1000D32C1 /* msgModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		64F33B477441DD84C6A19076 /* Frameworks */ = {
@@ -516,6 +544,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E00FC41C770EC7000D32C1 /* MBMessageIndexViewController.m in Sources */,
 				355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */,
 				35E00F921C748B8D000D32C1 /* MBChatView.m in Sources */,
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
@@ -524,10 +553,13 @@
 				355BBE1A1C703436000CD082 /* MBBaseNaviBar.m in Sources */,
 				355BBE201C70532D000CD082 /* MBPeopleInfoTableViewCell.m in Sources */,
 				355BBE3B1C71C595000CD082 /* MBShakerViewController.m in Sources */,
+				35E00FC11C76CAD8000D32C1 /* MBChatTableViewCell.m in Sources */,
+				35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
 				355BBE291C7080D2000CD082 /* MBPersonIndexViewController.m in Sources */,
 				355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */,
 				355BBE521C72CDF0000CD082 /* MBPhotoView.m in Sources */,
+				35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */,
 				35E00F8F1C747A01000D32C1 /* MBSituationReplyViewController.m in Sources */,
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
 				355BBE2C1C708950000CD082 /* MBRecentSituationView.m in Sources */,

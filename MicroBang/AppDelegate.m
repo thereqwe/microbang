@@ -10,6 +10,7 @@
 #import "MBNearListViewController.h"
 #import "MBActivityIndexViewController.h"
 #import "MBPersonIndexViewController.h"
+#import "MBMessageIndexViewController.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -32,7 +33,7 @@
     [NearNavi setTitle:@"附近"];
     ActivityNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBActivityIndexViewController new]];
     [ActivityNavi setTitle:@"发现"];
-    MessageNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[UIViewController new]];
+    MessageNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBMessageIndexViewController new]];
     [MessageNavi setTitle:@"消息"];
     PersonalNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBPersonIndexViewController new]];
     [PersonalNavi setTitle:@"个人"];
