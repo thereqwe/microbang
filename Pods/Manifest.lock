@@ -15,6 +15,13 @@ PODS:
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
   - AMap2DMap (3.3.0)
+  - CocoaAsyncSocket (7.4.3):
+    - CocoaAsyncSocket/All (= 7.4.3)
+  - CocoaAsyncSocket/All (7.4.3):
+    - CocoaAsyncSocket/GCD
+    - CocoaAsyncSocket/RunLoop
+  - CocoaAsyncSocket/GCD (7.4.3)
+  - CocoaAsyncSocket/RunLoop (7.4.3)
   - Masonry (0.6.4)
   - MJRefresh (3.1.0)
   - SDWebImage (3.7.5):
@@ -24,6 +31,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - AMap2DMap
+  - CocoaAsyncSocket
   - Masonry
   - MJRefresh
   - SDWebImage
@@ -31,6 +39,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
   AMap2DMap: e53461cdc345375e514579db17dbd721ff9ed9eb
+  CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
   MJRefresh: 743e6404967d1c2c688472ea3ecfde247d872db4
   SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461

@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <CocoaAsyncSocket/GCDAsyncUdpSocket.h>
 @interface MBChatView : UIView
 <
 UITableViewDelegate,
-UITableViewDataSource
+UITableViewDataSource,
+GCDAsyncUdpSocketDelegate
 >
 @end

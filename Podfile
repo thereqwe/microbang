@@ -9,5 +9,6 @@ pod ‘SDWebImage‘
 pod ‘MJRefresh‘
 pod ‘AMap2DMap‘
 pod ‘Masonry‘
+pod ‘CocoaAsyncSocket‘
 end
 
