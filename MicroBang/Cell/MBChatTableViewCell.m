@@ -32,33 +32,37 @@
     if(msgWidth>200){
         msgWidth=200;
     }
+    CGFloat msgHeight = [UILabel getHeightByWidth:msgWidth title:msg.text font:ui_lb_article.font];
     if (msg.fromType==eOthers) {
         ui_lb_article.backgroundColor = [UIColor grayColor];
-        [ui_img_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        [ui_img_avatar mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(iconWidth);
             make.height.mas_equalTo(iconHeight);
             make.left.mas_equalTo(KGlobalSmallMargin);
             make.top.mas_equalTo(KGlobalSmallMargin);
         }];
-        [ui_lb_article mas_makeConstraints:^(MASConstraintMaker *make) {
+        [ui_lb_article mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(ui_img_avatar.mas_right).offset(KGlobalSmallMargin);
             make.top.mas_equalTo(KGlobalSmallMargin);
             make.width.mas_equalTo(msgWidth);
+            make.height.mas_equalTo(msgHeight-20);
             make.bottom.mas_equalTo(-20);
         }];
+
     }else if(msg.fromType== eMe){
        // ui_lb_article.textAlignment = NSTextAlignmentRight;
         ui_lb_article.backgroundColor = [UIColor greenColor];
-        [ui_img_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
+        [ui_img_avatar mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(iconWidth);
             make.height.mas_equalTo(iconHeight);
             make.right.mas_equalTo(-KGlobalSmallMargin);
             make.top.mas_equalTo(KGlobalSmallMargin);
         }];
-        [ui_lb_article mas_makeConstraints:^(MASConstraintMaker *make) {
+        [ui_lb_article mas_remakeConstraints:^(MASConstraintMaker *make) {
             make.right.equalTo(ui_img_avatar.mas_left).offset(-KGlobalSmallMargin);
             make.top.mas_equalTo(KGlobalSmallMargin);
             make.width.mas_equalTo(msgWidth);
+            make.height.mas_equalTo(msgHeight);
             make.bottom.mas_equalTo(-20);
         }];
         [self layoutIfNeeded];

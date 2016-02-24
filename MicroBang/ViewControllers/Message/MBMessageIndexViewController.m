@@ -19,8 +19,16 @@
     // Do any additional setup after loading the view.
     MBChatView *view = [[MBChatView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     [self.view addSubview:view];
+    [self.navigationController.tabBarController setHidesBottomBarWhenPushed:YES];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.tabBarController.tabBar setHidden:YES];
+}
 
-
+- (void)viewWillDisappear:(BOOL)animated  {
+    [super viewWillDisappear:animated];
+    [self.navigationController.tabBarController.tabBar setHidden:NO];
+}
 @end
