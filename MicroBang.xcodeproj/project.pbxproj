@@ -42,6 +42,7 @@
 		35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FBD1C76C6B1000D32C1 /* msgModel.m */; };
 		35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC91C771658000D32C1 /* UILabel+LZ.m */; };
 		B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA1871D2517C400333230 /* MBMsgListViewController.m */; };
+		B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +96,8 @@
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		B8EEA1861D2517C400333230 /* MBMsgListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListViewController.h; sourceTree = "<group>"; };
 		B8EEA1871D2517C400333230 /* MBMsgListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListViewController.m; sourceTree = "<group>"; };
+		B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListTableViewCell.h; sourceTree = "<group>"; };
+		B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListTableViewCell.m; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +143,7 @@
 		355BBDE71C701AEE000CD082 /* MicroBang */ = {
 			isa = PBXGroup;
 			children = (
+				B8EEA18C1D25272900333230 /* chronos */,
 				35E00FBB1C76C68D000D32C1 /* Model */,
 				355BBE231C70644A000CD082 /* CustomView */,
 				355BBE1D1C7051D1000CD082 /* Cell */,
@@ -262,6 +266,8 @@
 		355BBE1D1C7051D1000CD082 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */,
+				B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -308,6 +314,13 @@
 				0578326EB56912D96F61DB52 /* libPods-MicroBang.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8EEA18C1D25272900333230 /* chronos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = chronos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,6 +477,7 @@
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
 				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
+				B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

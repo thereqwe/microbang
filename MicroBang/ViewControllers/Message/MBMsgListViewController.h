@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MBMsgListViewController : UIViewController
+@interface MBMsgListViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @end

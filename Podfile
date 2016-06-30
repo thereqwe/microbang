@@ -10,6 +10,6 @@ pod ‘MJRefresh‘
 pod ‘AMap2DMap‘
 pod ‘Masonry‘
 pod ‘CocoaAsyncSocket‘
-pod ‘MagicRecord‘
+pod ‘MagicalRecord‘
 end
 
