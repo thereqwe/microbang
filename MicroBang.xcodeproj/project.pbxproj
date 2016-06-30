@@ -16,19 +16,7 @@
 		355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE051C701F63000CD082 /* MBBaseViewController.m */; };
 		355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */; };
 		355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE0C1C7025EE000CD082 /* MBBaseTabBarController.m */; };
-		355BBE141C70334C000CD082 /* MBNearListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE131C70334C000CD082 /* MBNearListViewController.m */; };
-		355BBE171C703384000CD082 /* MBNearMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE161C703384000CD082 /* MBNearMapViewController.m */; };
-		355BBE1A1C703436000CD082 /* MBBaseNaviBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE191C703436000CD082 /* MBBaseNaviBar.m */; };
-		355BBE201C70532D000CD082 /* MBPeopleInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE1F1C70532D000CD082 /* MBPeopleInfoTableViewCell.m */; };
 		355BBE221C705902000CD082 /* bb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE211C705902000CD082 /* bb.jpg */; };
-		355BBE261C70732E000CD082 /* MBActivityIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE251C70732E000CD082 /* MBActivityIndexViewController.m */; };
-		355BBE291C7080D2000CD082 /* MBPersonIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE281C7080D2000CD082 /* MBPersonIndexViewController.m */; };
-		355BBE2C1C708950000CD082 /* MBRecentSituationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE2B1C708950000CD082 /* MBRecentSituationView.m */; };
-		355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE2E1C708AB4000CD082 /* MBRecentComeView.m */; };
-		355BBE321C708ADE000CD082 /* MBSetupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE311C708ADE000CD082 /* MBSetupView.m */; };
-		355BBE351C708F30000CD082 /* MBHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE341C708F30000CD082 /* MBHelpView.m */; };
-		355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */; };
-		355BBE3B1C71C595000CD082 /* MBShakerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE3A1C71C595000CD082 /* MBShakerViewController.m */; };
 		355BBE3D1C71D563000CD082 /* bg_yaoyao_under.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */; };
 		355BBE3F1C71D571000CD082 /* bg_yaoyao_above.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE3E1C71D571000CD082 /* bg_yaoyao_above.png */; };
 		355BBE411C71D57C000CD082 /* bg_shaking.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE401C71D57C000CD082 /* bg_shaking.png */; };
@@ -37,12 +25,7 @@
 		355BBE4A1C71DA2A000CD082 /* Shake_01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE461C71DA2A000CD082 /* Shake_01@2x.png */; };
 		355BBE4B1C71DA2A000CD082 /* Shake_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE471C71DA2A000CD082 /* Shake_02.png */; };
 		355BBE4C1C71DA2A000CD082 /* Shake_02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 355BBE481C71DA2A000CD082 /* Shake_02@2x.png */; };
-		355BBE4F1C72C381000CD082 /* MBPhotoWallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */; };
-		355BBE521C72CDF0000CD082 /* MBPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 355BBE511C72CDF0000CD082 /* MBPhotoView.m */; };
 		35E00F891C743F29000D32C1 /* mega.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F881C743F29000D32C1 /* mega.jpg */; };
-		35E00F8C1C744E42000D32C1 /* MBSituationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00F8B1C744E42000D32C1 /* MBSituationViewController.m */; };
-		35E00F8F1C747A01000D32C1 /* MBSituationReplyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00F8E1C747A01000D32C1 /* MBSituationReplyViewController.m */; };
-		35E00F921C748B8D000D32C1 /* MBChatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00F911C748B8D000D32C1 /* MBChatView.m */; };
 		35E00FA11C756394000D32C1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F941C756394000D32C1 /* Icon-72.png */; };
 		35E00FA21C756394000D32C1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F951C756394000D32C1 /* Icon-72@2x.png */; };
 		35E00FA31C756394000D32C1 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F961C756394000D32C1 /* Icon-76.png */; };
@@ -57,9 +40,8 @@
 		35E00FAC1C756394000D32C1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00F9F1C756394000D32C1 /* Icon.png */; };
 		35E00FAD1C756394000D32C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00FA01C756394000D32C1 /* Icon@2x.png */; };
 		35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FBD1C76C6B1000D32C1 /* msgModel.m */; };
-		35E00FC11C76CAD8000D32C1 /* MBChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC01C76CAD8000D32C1 /* MBChatTableViewCell.m */; };
-		35E00FC41C770EC7000D32C1 /* MBMessageIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC31C770EC7000D32C1 /* MBMessageIndexViewController.m */; };
 		35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC91C771658000D32C1 /* UILabel+LZ.m */; };
+		B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA1871D2517C400333230 /* MBMsgListViewController.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
 /* End PBXBuildFile section */
 
@@ -82,31 +64,7 @@
 		355BBE0A1C70234A000CD082 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		355BBE0B1C7025EE000CD082 /* MBBaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseTabBarController.h; sourceTree = "<group>"; };
 		355BBE0C1C7025EE000CD082 /* MBBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseTabBarController.m; sourceTree = "<group>"; };
-		355BBE121C70334C000CD082 /* MBNearListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNearListViewController.h; sourceTree = "<group>"; };
-		355BBE131C70334C000CD082 /* MBNearListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNearListViewController.m; sourceTree = "<group>"; };
-		355BBE151C703384000CD082 /* MBNearMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBNearMapViewController.h; sourceTree = "<group>"; };
-		355BBE161C703384000CD082 /* MBNearMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBNearMapViewController.m; sourceTree = "<group>"; };
-		355BBE181C703436000CD082 /* MBBaseNaviBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBBaseNaviBar.h; sourceTree = "<group>"; };
-		355BBE191C703436000CD082 /* MBBaseNaviBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBBaseNaviBar.m; sourceTree = "<group>"; };
-		355BBE1E1C70532D000CD082 /* MBPeopleInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPeopleInfoTableViewCell.h; sourceTree = "<group>"; };
-		355BBE1F1C70532D000CD082 /* MBPeopleInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPeopleInfoTableViewCell.m; sourceTree = "<group>"; };
 		355BBE211C705902000CD082 /* bb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bb.jpg; sourceTree = "<group>"; };
-		355BBE241C70732E000CD082 /* MBActivityIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBActivityIndexViewController.h; sourceTree = "<group>"; };
-		355BBE251C70732E000CD082 /* MBActivityIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBActivityIndexViewController.m; sourceTree = "<group>"; };
-		355BBE271C7080D2000CD082 /* MBPersonIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPersonIndexViewController.h; sourceTree = "<group>"; };
-		355BBE281C7080D2000CD082 /* MBPersonIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPersonIndexViewController.m; sourceTree = "<group>"; };
-		355BBE2A1C708950000CD082 /* MBRecentSituationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRecentSituationView.h; sourceTree = "<group>"; };
-		355BBE2B1C708950000CD082 /* MBRecentSituationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentSituationView.m; sourceTree = "<group>"; };
-		355BBE2D1C708AB4000CD082 /* MBRecentComeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRecentComeView.h; sourceTree = "<group>"; };
-		355BBE2E1C708AB4000CD082 /* MBRecentComeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentComeView.m; sourceTree = "<group>"; };
-		355BBE301C708ADE000CD082 /* MBSetupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSetupView.h; sourceTree = "<group>"; };
-		355BBE311C708ADE000CD082 /* MBSetupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSetupView.m; sourceTree = "<group>"; };
-		355BBE331C708F30000CD082 /* MBHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBHelpView.h; sourceTree = "<group>"; };
-		355BBE341C708F30000CD082 /* MBHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBHelpView.m; sourceTree = "<group>"; };
-		355BBE361C709220000CD082 /* MBRecentSituationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRecentSituationTableViewCell.h; sourceTree = "<group>"; };
-		355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRecentSituationTableViewCell.m; sourceTree = "<group>"; };
-		355BBE391C71C595000CD082 /* MBShakerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBShakerViewController.h; sourceTree = "<group>"; };
-		355BBE3A1C71C595000CD082 /* MBShakerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBShakerViewController.m; sourceTree = "<group>"; };
 		355BBE3C1C71D563000CD082 /* bg_yaoyao_under.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_yaoyao_under.png; sourceTree = "<group>"; };
 		355BBE3E1C71D571000CD082 /* bg_yaoyao_above.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_yaoyao_above.png; sourceTree = "<group>"; };
 		355BBE401C71D57C000CD082 /* bg_shaking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_shaking.png; sourceTree = "<group>"; };
@@ -116,17 +74,7 @@
 		355BBE461C71DA2A000CD082 /* Shake_01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_01@2x.png"; sourceTree = "<group>"; };
 		355BBE471C71DA2A000CD082 /* Shake_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Shake_02.png; sourceTree = "<group>"; };
 		355BBE481C71DA2A000CD082 /* Shake_02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shake_02@2x.png"; sourceTree = "<group>"; };
-		355BBE4D1C72C381000CD082 /* MBPhotoWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPhotoWallViewController.h; sourceTree = "<group>"; };
-		355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPhotoWallViewController.m; sourceTree = "<group>"; };
-		355BBE501C72CDF0000CD082 /* MBPhotoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBPhotoView.h; sourceTree = "<group>"; };
-		355BBE511C72CDF0000CD082 /* MBPhotoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBPhotoView.m; sourceTree = "<group>"; };
 		35E00F881C743F29000D32C1 /* mega.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mega.jpg; sourceTree = "<group>"; };
-		35E00F8A1C744E42000D32C1 /* MBSituationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSituationViewController.h; sourceTree = "<group>"; };
-		35E00F8B1C744E42000D32C1 /* MBSituationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSituationViewController.m; sourceTree = "<group>"; };
-		35E00F8D1C747A01000D32C1 /* MBSituationReplyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBSituationReplyViewController.h; sourceTree = "<group>"; };
-		35E00F8E1C747A01000D32C1 /* MBSituationReplyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBSituationReplyViewController.m; sourceTree = "<group>"; };
-		35E00F901C748B8D000D32C1 /* MBChatView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatView.h; sourceTree = "<group>"; };
-		35E00F911C748B8D000D32C1 /* MBChatView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatView.m; sourceTree = "<group>"; };
 		35E00F941C756394000D32C1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
 		35E00F951C756394000D32C1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
 		35E00F961C756394000D32C1 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
@@ -142,13 +90,11 @@
 		35E00FA01C756394000D32C1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		35E00FBC1C76C6B1000D32C1 /* msgModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msgModel.h; sourceTree = "<group>"; };
 		35E00FBD1C76C6B1000D32C1 /* msgModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = msgModel.m; sourceTree = "<group>"; };
-		35E00FBF1C76CAD8000D32C1 /* MBChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatTableViewCell.h; sourceTree = "<group>"; };
-		35E00FC01C76CAD8000D32C1 /* MBChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatTableViewCell.m; sourceTree = "<group>"; };
-		35E00FC21C770EC7000D32C1 /* MBMessageIndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMessageIndexViewController.h; sourceTree = "<group>"; };
-		35E00FC31C770EC7000D32C1 /* MBMessageIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMessageIndexViewController.m; sourceTree = "<group>"; };
 		35E00FC81C771658000D32C1 /* UILabel+LZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LZ.h"; sourceTree = "<group>"; };
 		35E00FC91C771658000D32C1 /* UILabel+LZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LZ.m"; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
+		B8EEA1861D2517C400333230 /* MBMsgListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListViewController.h; sourceTree = "<group>"; };
+		B8EEA1871D2517C400333230 /* MBMsgListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListViewController.m; sourceTree = "<group>"; };
 		DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.release.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,8 +225,6 @@
 				355BBE081C701FD9000CD082 /* MBBaseNavigationController.m */,
 				355BBE0B1C7025EE000CD082 /* MBBaseTabBarController.h */,
 				355BBE0C1C7025EE000CD082 /* MBBaseTabBarController.m */,
-				355BBE181C703436000CD082 /* MBBaseNaviBar.h */,
-				355BBE191C703436000CD082 /* MBBaseNaviBar.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -288,16 +232,6 @@
 		355BBE0E1C702757000CD082 /* Activity */ = {
 			isa = PBXGroup;
 			children = (
-				355BBE241C70732E000CD082 /* MBActivityIndexViewController.h */,
-				355BBE251C70732E000CD082 /* MBActivityIndexViewController.m */,
-				355BBE391C71C595000CD082 /* MBShakerViewController.h */,
-				355BBE3A1C71C595000CD082 /* MBShakerViewController.m */,
-				355BBE4D1C72C381000CD082 /* MBPhotoWallViewController.h */,
-				355BBE4E1C72C381000CD082 /* MBPhotoWallViewController.m */,
-				35E00F8A1C744E42000D32C1 /* MBSituationViewController.h */,
-				35E00F8B1C744E42000D32C1 /* MBSituationViewController.m */,
-				35E00F8D1C747A01000D32C1 /* MBSituationReplyViewController.h */,
-				35E00F8E1C747A01000D32C1 /* MBSituationReplyViewController.m */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -305,8 +239,8 @@
 		355BBE0F1C702757000CD082 /* Message */ = {
 			isa = PBXGroup;
 			children = (
-				35E00FC21C770EC7000D32C1 /* MBMessageIndexViewController.h */,
-				35E00FC31C770EC7000D32C1 /* MBMessageIndexViewController.m */,
+				B8EEA1861D2517C400333230 /* MBMsgListViewController.h */,
+				B8EEA1871D2517C400333230 /* MBMsgListViewController.m */,
 			);
 			path = Message;
 			sourceTree = "<group>";
@@ -314,10 +248,6 @@
 		355BBE101C702757000CD082 /* Near */ = {
 			isa = PBXGroup;
 			children = (
-				355BBE121C70334C000CD082 /* MBNearListViewController.h */,
-				355BBE131C70334C000CD082 /* MBNearListViewController.m */,
-				355BBE151C703384000CD082 /* MBNearMapViewController.h */,
-				355BBE161C703384000CD082 /* MBNearMapViewController.m */,
 			);
 			path = Near;
 			sourceTree = "<group>";
@@ -325,8 +255,6 @@
 		355BBE111C702757000CD082 /* Personal */ = {
 			isa = PBXGroup;
 			children = (
-				355BBE271C7080D2000CD082 /* MBPersonIndexViewController.h */,
-				355BBE281C7080D2000CD082 /* MBPersonIndexViewController.m */,
 			);
 			path = Personal;
 			sourceTree = "<group>";
@@ -334,12 +262,6 @@
 		355BBE1D1C7051D1000CD082 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				355BBE1E1C70532D000CD082 /* MBPeopleInfoTableViewCell.h */,
-				355BBE1F1C70532D000CD082 /* MBPeopleInfoTableViewCell.m */,
-				355BBE361C709220000CD082 /* MBRecentSituationTableViewCell.h */,
-				355BBE371C709220000CD082 /* MBRecentSituationTableViewCell.m */,
-				35E00FBF1C76CAD8000D32C1 /* MBChatTableViewCell.h */,
-				35E00FC01C76CAD8000D32C1 /* MBChatTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -347,18 +269,6 @@
 		355BBE231C70644A000CD082 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				355BBE2A1C708950000CD082 /* MBRecentSituationView.h */,
-				355BBE2B1C708950000CD082 /* MBRecentSituationView.m */,
-				355BBE2D1C708AB4000CD082 /* MBRecentComeView.h */,
-				355BBE2E1C708AB4000CD082 /* MBRecentComeView.m */,
-				355BBE301C708ADE000CD082 /* MBSetupView.h */,
-				355BBE311C708ADE000CD082 /* MBSetupView.m */,
-				355BBE331C708F30000CD082 /* MBHelpView.h */,
-				355BBE341C708F30000CD082 /* MBHelpView.m */,
-				355BBE501C72CDF0000CD082 /* MBPhotoView.h */,
-				355BBE511C72CDF0000CD082 /* MBPhotoView.m */,
-				35E00F901C748B8D000D32C1 /* MBChatView.h */,
-				35E00F911C748B8D000D32C1 /* MBChatView.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -434,7 +344,7 @@
 				TargetAttributes = {
 					355BBDE41C701AEE000CD082 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = S2R8NYYB9E;
+						DevelopmentTeam = H9EMJ6BDSU;
 					};
 				};
 			};
@@ -544,33 +454,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35E00FC41C770EC7000D32C1 /* MBMessageIndexViewController.m in Sources */,
 				355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */,
-				35E00F921C748B8D000D32C1 /* MBChatView.m in Sources */,
+				B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */,
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
-				355BBE321C708ADE000CD082 /* MBSetupView.m in Sources */,
-				355BBE141C70334C000CD082 /* MBNearListViewController.m in Sources */,
-				355BBE1A1C703436000CD082 /* MBBaseNaviBar.m in Sources */,
-				355BBE201C70532D000CD082 /* MBPeopleInfoTableViewCell.m in Sources */,
-				355BBE3B1C71C595000CD082 /* MBShakerViewController.m in Sources */,
-				35E00FC11C76CAD8000D32C1 /* MBChatTableViewCell.m in Sources */,
 				35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
-				355BBE291C7080D2000CD082 /* MBPersonIndexViewController.m in Sources */,
-				355BBE2F1C708AB4000CD082 /* MBRecentComeView.m in Sources */,
-				355BBE521C72CDF0000CD082 /* MBPhotoView.m in Sources */,
 				35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */,
-				35E00F8F1C747A01000D32C1 /* MBSituationReplyViewController.m in Sources */,
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
-				355BBE2C1C708950000CD082 /* MBRecentSituationView.m in Sources */,
-				355BBE351C708F30000CD082 /* MBHelpView.m in Sources */,
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
-				355BBE381C709220000CD082 /* MBRecentSituationTableViewCell.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
-				355BBE261C70732E000CD082 /* MBActivityIndexViewController.m in Sources */,
-				35E00F8C1C744E42000D32C1 /* MBSituationViewController.m in Sources */,
-				355BBE171C703384000CD082 /* MBNearMapViewController.m in Sources */,
-				355BBE4F1C72C381000CD082 /* MBPhotoWallViewController.m in Sources */,
 				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,11 +574,12 @@
 			baseConfigurationReference = A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MicroBang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.leon.microbang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youku.liveshow;
 				PRODUCT_NAME = "微泡";
 			};
 			name = Debug;
@@ -696,11 +589,12 @@
 			baseConfigurationReference = DCB9147D8380E28D337D2EB0 /* Pods-MicroBang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/$(TARGET_NAME)/PrefixHeader.pch";
 				INFOPLIST_FILE = MicroBang/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.leon.microbang;
+				PRODUCT_BUNDLE_IDENTIFIER = com.youku.liveshow;
 				PRODUCT_NAME = "微泡";
 			};
 			name = Release;

@@ -17,7 +17,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self setNavigationBarHidden:YES];
     id target = self.interactivePopGestureRecognizer.delegate;
     
     // 创建全屏滑动手势，调用系统自带滑动手势的target的action方法

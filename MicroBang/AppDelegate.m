@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "MBNearListViewController.h"
-#import "MBActivityIndexViewController.h"
-#import "MBPersonIndexViewController.h"
-#import "MBMessageIndexViewController.h"
+#import "MBBaseNavigationController.h"
+#import "MBBaseViewController.h"
+#import "MBMsgListViewController.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -28,17 +27,20 @@
     UIWindow *window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     window.backgroundColor = [UIColor whiteColor];
     self.window = window;
-    //4 section
-    NearNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBNearListViewController new]];
-    [NearNavi setTitle:@"附近"];
-    ActivityNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBActivityIndexViewController new]];
-    [ActivityNavi setTitle:@"发现"];
-    MessageNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBMessageIndexViewController new]];
-    [MessageNavi setTitle:@"消息"];
-    PersonalNavi = [[MBBaseNavigationController alloc]initWithRootViewController:[MBPersonIndexViewController new]];
-    [PersonalNavi setTitle:@"个人"];
+    //聊天中心
+    MessageNavi = [[MBBaseNavigationController alloc]init];
+    MBMsgListViewController *messageIndexVc = [MBMsgListViewController new];
+    [MessageNavi pushViewController:messageIndexVc animated:NO];
+    
+    //个人设置中心
+    PersonalNavi = [[MBBaseNavigationController alloc]init];
+    MBBaseViewController *personalIndexVc = [MBBaseViewController new];
+    [PersonalNavi pushViewController:personalIndexVc animated:NO];
+    
     baseTabBar = [[MBBaseTabBarController alloc]init];
-    [baseTabBar setViewControllers:@[NearNavi,ActivityNavi,MessageNavi,PersonalNavi]];
+    [baseTabBar setViewControllers:@[MessageNavi,PersonalNavi]];
+    MessageNavi.title = @"聊天";
+    PersonalNavi.title = @"设置";
     window.rootViewController = baseTabBar;
     [self.window makeKeyAndVisible];
 }
