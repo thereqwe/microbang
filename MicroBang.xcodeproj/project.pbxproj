@@ -41,6 +41,10 @@
 		35E00FAD1C756394000D32C1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35E00FA01C756394000D32C1 /* Icon@2x.png */; };
 		35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FBD1C76C6B1000D32C1 /* msgModel.m */; };
 		35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 35E00FC91C771658000D32C1 /* UILabel+LZ.m */; };
+		B8281E311D2620770047F8F1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8281E2F1D2620770047F8F1 /* Model.xcdatamodeld */; };
+		B8281E421D2656690047F8F1 /* MBFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E411D2656690047F8F1 /* MBFriendListViewController.m */; };
+		B8281E451D265C790047F8F1 /* MBFriedndListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */; };
+		B8281E481D2666170047F8F1 /* MBChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E471D2666170047F8F1 /* MBChatRoomViewController.m */; };
 		B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA1871D2517C400333230 /* MBMsgListViewController.m */; };
 		B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
@@ -94,6 +98,13 @@
 		35E00FC81C771658000D32C1 /* UILabel+LZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LZ.h"; sourceTree = "<group>"; };
 		35E00FC91C771658000D32C1 /* UILabel+LZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LZ.m"; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
+		B8281E301D2620770047F8F1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		B8281E401D2656690047F8F1 /* MBFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFriendListViewController.h; sourceTree = "<group>"; };
+		B8281E411D2656690047F8F1 /* MBFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFriendListViewController.m; sourceTree = "<group>"; };
+		B8281E431D265C790047F8F1 /* MBFriedndListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFriedndListTableViewCell.h; sourceTree = "<group>"; };
+		B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFriedndListTableViewCell.m; sourceTree = "<group>"; };
+		B8281E461D2666170047F8F1 /* MBChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatRoomViewController.h; sourceTree = "<group>"; };
+		B8281E471D2666170047F8F1 /* MBChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatRoomViewController.m; sourceTree = "<group>"; };
 		B8EEA1861D2517C400333230 /* MBMsgListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListViewController.h; sourceTree = "<group>"; };
 		B8EEA1871D2517C400333230 /* MBMsgListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListViewController.m; sourceTree = "<group>"; };
 		B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListTableViewCell.h; sourceTree = "<group>"; };
@@ -143,6 +154,7 @@
 		355BBDE71C701AEE000CD082 /* MicroBang */ = {
 			isa = PBXGroup;
 			children = (
+				B8281E2E1D2620620047F8F1 /* CoreData */,
 				B8EEA18C1D25272900333230 /* chronos */,
 				35E00FBB1C76C68D000D32C1 /* Model */,
 				355BBE231C70644A000CD082 /* CustomView */,
@@ -212,10 +224,7 @@
 		355BBE021C701F08000CD082 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				355BBE0E1C702757000CD082 /* Activity */,
 				355BBE0F1C702757000CD082 /* Message */,
-				355BBE101C702757000CD082 /* Near */,
-				355BBE111C702757000CD082 /* Personal */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -233,34 +242,17 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		355BBE0E1C702757000CD082 /* Activity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Activity;
-			sourceTree = "<group>";
-		};
 		355BBE0F1C702757000CD082 /* Message */ = {
 			isa = PBXGroup;
 			children = (
 				B8EEA1861D2517C400333230 /* MBMsgListViewController.h */,
 				B8EEA1871D2517C400333230 /* MBMsgListViewController.m */,
+				B8281E401D2656690047F8F1 /* MBFriendListViewController.h */,
+				B8281E411D2656690047F8F1 /* MBFriendListViewController.m */,
+				B8281E461D2666170047F8F1 /* MBChatRoomViewController.h */,
+				B8281E471D2666170047F8F1 /* MBChatRoomViewController.m */,
 			);
 			path = Message;
-			sourceTree = "<group>";
-		};
-		355BBE101C702757000CD082 /* Near */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Near;
-			sourceTree = "<group>";
-		};
-		355BBE111C702757000CD082 /* Personal */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Personal;
 			sourceTree = "<group>";
 		};
 		355BBE1D1C7051D1000CD082 /* Cell */ = {
@@ -268,6 +260,8 @@
 			children = (
 				B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */,
 				B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */,
+				B8281E431D265C790047F8F1 /* MBFriedndListTableViewCell.h */,
+				B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -314,6 +308,14 @@
 				0578326EB56912D96F61DB52 /* libPods-MicroBang.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8281E2E1D2620620047F8F1 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B8281E2F1D2620770047F8F1 /* Model.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		B8EEA18C1D25272900333230 /* chronos */ = {
@@ -472,12 +474,16 @@
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
 				35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
+				B8281E421D2656690047F8F1 /* MBFriendListViewController.m in Sources */,
 				35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */,
+				B8281E451D265C790047F8F1 /* MBFriedndListTableViewCell.m in Sources */,
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
+				B8281E481D2666170047F8F1 /* MBChatRoomViewController.m in Sources */,
 				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
 				B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */,
+				B8281E311D2620770047F8F1 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -635,6 +641,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B8281E2F1D2620770047F8F1 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B8281E301D2620770047F8F1 /* Model.xcdatamodel */,
+			);
+			currentVersion = B8281E301D2620770047F8F1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 355BBDDD1C701AEE000CD082 /* Project object */;
 }

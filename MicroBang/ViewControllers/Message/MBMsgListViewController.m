@@ -8,6 +8,8 @@
 
 #import "MBMsgListViewController.h"
 #import "MBMsgListTableViewCell.h"
+#import "MBFriendListViewController.h"
+#import "MBChatRoomViewController.h"
 @implementation MBMsgListViewController
 {
     UITableView *ui_table_msg_list;
@@ -35,6 +37,7 @@
     friendBtn.frame = CGRectMake(0, 0, 20, 20);
     friendBtn.backgroundColor = [UIColor redColor];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:friendBtn];
+    [friendBtn addTarget:self action:@selector(goToFriendList) forControlEvents:UIControlEventTouchUpInside];
     
     ui_table_msg_list = [UITableView new];
     ui_table_msg_list.delegate = self;
@@ -50,6 +53,13 @@
     }];
 }
 
+- (void)goToFriendList
+{
+    MBFriendListViewController *friendListViewController =[MBFriendListViewController new];
+    [friendListViewController setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:friendListViewController animated:YES];
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 50;
@@ -58,6 +68,14 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MBMsgListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    [cell setupData:nil];
     return  cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MBChatRoomViewController *chatRoomViewController = [MBChatRoomViewController new];
+    chatRoomViewController.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:chatRoomViewController animated:YES];
 }
 @end

@@ -10,6 +10,7 @@
 #import "MBBaseNavigationController.h"
 #import "MBBaseViewController.h"
 #import "MBMsgListViewController.h"
+#import "Msg.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -41,12 +42,25 @@
     [baseTabBar setViewControllers:@[MessageNavi,PersonalNavi]];
     MessageNavi.title = @"聊天";
     PersonalNavi.title = @"设置";
+  
     window.rootViewController = baseTabBar;
     [self.window makeKeyAndVisible];
 }
 
 - (void)setupEnv {
     [MAMapServices sharedServices].apiKey = @"e590b8299c0475aaff1e3d58e3c22964";
+    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Model.sqlte"];
+//    Msg* msg = [Msg MR_createEntity];
+//    
+//    msg.from_mid=@"123";
+//    
+//    msg.text=@"hi";
+//    
+//    [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
+//    NSArray* pers_ALL = [Msg MR_findAll];
+//    msg = pers_ALL[0];
+//    NSLog(@"%@",msg.text);
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

@@ -1,22 +1,19 @@
 //
-//  MBMsgListTableViewCell.m
+//  MBFriedndListTableViewCell.m
 //  MicroBang
 //
-//  Created by Yue Shen on 16/6/30.
+//  Created by Yue Shen on 16/7/1.
 //  Copyright © 2016年 leon. All rights reserved.
 //
 
-#import "MBMsgListTableViewCell.h"
+#import "MBFriedndListTableViewCell.h"
 
-@implementation MBMsgListTableViewCell
+@implementation MBFriedndListTableViewCell
 {
-    UIView *ui_view_container;
     UIImageView *ui_img_avatar;
-    UILabel *ui_lb_name;
-    UILabel *ui_lb_msg;
-    UILabel *ui_lb_pubilic_time;
+    UILabel     *ui_lb_name;
+    UIView      *ui_view_container;
 }
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(nullable NSString *)reuseIdentifier
 
 {
@@ -48,31 +45,13 @@
         make.right.equalTo(ui_view_container).offset(-100);
         make.top.equalTo(ui_view_container).offset(20);
     }];
-    
-    ui_lb_msg = [UILabel new];
-    [ui_view_container addSubview:ui_lb_msg];
-    [ui_lb_msg mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(ui_img_avatar.mas_right).offset(8);
-        make.right.equalTo(ui_view_container);
-        make.top.equalTo(ui_lb_name.mas_bottom).offset(20);
-    }];
-    
-    ui_lb_pubilic_time = [UILabel new];
-    ui_lb_pubilic_time.textAlignment = NSTextAlignmentRight;
-    ui_lb_pubilic_time.font = [UIFont systemFontOfSize:7];
-    [ui_view_container addSubview:ui_lb_pubilic_time];
-    [ui_lb_pubilic_time mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.width.mas_equalTo(100);
-        make.right.equalTo(ui_view_container).offset(-8);
-        make.centerY.equalTo(ui_lb_name);
-    }];
+
 }
 
 - (void)setupData:(NSDictionary*)dict
 {
     [ui_img_avatar sd_setImageWithURL:[NSURL URLWithString:@"http://wx.qlogo.cn/mmopen/iaRlzG8zy7BuGFSaxAAerrq4uv9q79fVVfmbNfuKqyMG8Aaclwibne2m3Kia2DEBOBKXvXCHRuXuWCjgwybRJlEpbjoSt6icmQ7b/0"]];
     [ui_lb_name setText:@"leon"];
-    [ui_lb_msg setText:@"ni hao hello world"];
-    [ui_lb_pubilic_time setText:@"2015-06-25 16:25:48"];
 }
+
 @end
