@@ -62,6 +62,7 @@
     ui_btn_register = [UIButton new];
     ui_btn_register.backgroundColor = [UIColor blueColor];
     [ui_btn_register setTitle:@"注册" forState:UIControlStateNormal];
+    [ui_btn_register addTarget:self action:@selector(doRegister) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:ui_btn_register];
     [ui_btn_register mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ui_tf_pwd_repeat.mas_bottom).offset(10);
@@ -82,7 +83,34 @@
 
 - (void)doRegister
 {
-    [[HTTPService Instance] ]
+    NSString *name = ui_tf_name.text;
+    NSString *pwd = ui_tf_pwd.text;
+    NSString *pwd_repeat = ui_tf_pwd_repeat.text;
+    if([name isEqualToString:@""]||[pwd isEqualToString:@""]){
+        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"请输入用户名密码!" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    if(![pwd isEqualToString:pwd_repeat]){
+        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"重复密码有误" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
+    NSDictionary *dict = @{@"name":name,@"pwd":pwd,@"action":@"register"};
+    [[HTTPService Instance] mobilePOST:SERVER_URL path:@"/responder.php" parameters:[dict mutableCopy] success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject);
+        if(![responseObject[@"errCode"] isEqualToString:@"000"]){
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:responseObject[@"msg"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alert show];
+        }else{
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:responseObject[@"msg"] delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alert show];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@",error);
+    }];
 }
 
 -(void)setTextFieldLeftPadding:(UITextField *)textField forWidth:(CGFloat)leftWidth
