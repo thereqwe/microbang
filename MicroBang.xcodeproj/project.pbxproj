@@ -45,6 +45,13 @@
 		B8281E421D2656690047F8F1 /* MBFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E411D2656690047F8F1 /* MBFriendListViewController.m */; };
 		B8281E451D265C790047F8F1 /* MBFriedndListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */; };
 		B8281E481D2666170047F8F1 /* MBChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E471D2666170047F8F1 /* MBChatRoomViewController.m */; };
+		B8281E571D2A507D0047F8F1 /* MBChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E561D2A507D0047F8F1 /* MBChatTableViewCell.m */; };
+		B8281E601D2A75B10047F8F1 /* Msg+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E591D2A75B10047F8F1 /* Msg+CoreDataProperties.m */; };
+		B8281E611D2A75B10047F8F1 /* Msg.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E5B1D2A75B10047F8F1 /* Msg.m */; };
+		B8281E621D2A75B10047F8F1 /* Fridend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E5D1D2A75B10047F8F1 /* Fridend+CoreDataProperties.m */; };
+		B8281E631D2A75B10047F8F1 /* Fridend.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E5F1D2A75B10047F8F1 /* Fridend.m */; };
+		B8281E671D2B842B0047F8F1 /* MBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E661D2B842B0047F8F1 /* MBRegisterViewController.m */; };
+		B8281E6B1D2B91D70047F8F1 /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E6A1D2B91D70047F8F1 /* HTTPService.m */; };
 		B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA1871D2517C400333230 /* MBMsgListViewController.m */; };
 		B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
@@ -105,6 +112,20 @@
 		B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFriedndListTableViewCell.m; sourceTree = "<group>"; };
 		B8281E461D2666170047F8F1 /* MBChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatRoomViewController.h; sourceTree = "<group>"; };
 		B8281E471D2666170047F8F1 /* MBChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatRoomViewController.m; sourceTree = "<group>"; };
+		B8281E551D2A507D0047F8F1 /* MBChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatTableViewCell.h; sourceTree = "<group>"; };
+		B8281E561D2A507D0047F8F1 /* MBChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBChatTableViewCell.m; sourceTree = "<group>"; };
+		B8281E581D2A75B10047F8F1 /* Msg+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Msg+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B8281E591D2A75B10047F8F1 /* Msg+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Msg+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B8281E5A1D2A75B10047F8F1 /* Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Msg.h; sourceTree = "<group>"; };
+		B8281E5B1D2A75B10047F8F1 /* Msg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Msg.m; sourceTree = "<group>"; };
+		B8281E5C1D2A75B10047F8F1 /* Fridend+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fridend+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B8281E5D1D2A75B10047F8F1 /* Fridend+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fridend+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B8281E5E1D2A75B10047F8F1 /* Fridend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fridend.h; sourceTree = "<group>"; };
+		B8281E5F1D2A75B10047F8F1 /* Fridend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fridend.m; sourceTree = "<group>"; };
+		B8281E651D2B842B0047F8F1 /* MBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRegisterViewController.h; sourceTree = "<group>"; };
+		B8281E661D2B842B0047F8F1 /* MBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRegisterViewController.m; sourceTree = "<group>"; };
+		B8281E691D2B91D70047F8F1 /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		B8281E6A1D2B91D70047F8F1 /* HTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
 		B8EEA1861D2517C400333230 /* MBMsgListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListViewController.h; sourceTree = "<group>"; };
 		B8EEA1871D2517C400333230 /* MBMsgListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListViewController.m; sourceTree = "<group>"; };
 		B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListTableViewCell.h; sourceTree = "<group>"; };
@@ -206,6 +227,8 @@
 		355BBE001C701F08000CD082 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				B8281E691D2B91D70047F8F1 /* HTTPService.h */,
+				B8281E6A1D2B91D70047F8F1 /* HTTPService.m */,
 				355BBE421C71D615000CD082 /* UIView+LZ.h */,
 				355BBE431C71D615000CD082 /* UIView+LZ.m */,
 				35E00FC81C771658000D32C1 /* UILabel+LZ.h */,
@@ -224,6 +247,7 @@
 		355BBE021C701F08000CD082 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B8281E641D2B82E10047F8F1 /* Login */,
 				355BBE0F1C702757000CD082 /* Message */,
 			);
 			path = ViewControllers;
@@ -260,6 +284,8 @@
 			children = (
 				B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */,
 				B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */,
+				B8281E551D2A507D0047F8F1 /* MBChatTableViewCell.h */,
+				B8281E561D2A507D0047F8F1 /* MBChatTableViewCell.m */,
 				B8281E431D265C790047F8F1 /* MBFriedndListTableViewCell.h */,
 				B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */,
 			);
@@ -313,9 +339,26 @@
 		B8281E2E1D2620620047F8F1 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				B8281E581D2A75B10047F8F1 /* Msg+CoreDataProperties.h */,
+				B8281E591D2A75B10047F8F1 /* Msg+CoreDataProperties.m */,
+				B8281E5A1D2A75B10047F8F1 /* Msg.h */,
+				B8281E5B1D2A75B10047F8F1 /* Msg.m */,
+				B8281E5C1D2A75B10047F8F1 /* Fridend+CoreDataProperties.h */,
+				B8281E5E1D2A75B10047F8F1 /* Fridend.h */,
+				B8281E5D1D2A75B10047F8F1 /* Fridend+CoreDataProperties.m */,
+				B8281E5F1D2A75B10047F8F1 /* Fridend.m */,
 				B8281E2F1D2620770047F8F1 /* Model.xcdatamodeld */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B8281E641D2B82E10047F8F1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				B8281E651D2B842B0047F8F1 /* MBRegisterViewController.h */,
+				B8281E661D2B842B0047F8F1 /* MBRegisterViewController.m */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B8EEA18C1D25272900333230 /* chronos */ = {
@@ -470,17 +513,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */,
+				B8281E601D2A75B10047F8F1 /* Msg+CoreDataProperties.m in Sources */,
 				B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */,
+				B8281E611D2A75B10047F8F1 /* Msg.m in Sources */,
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
+				B8281E621D2A75B10047F8F1 /* Fridend+CoreDataProperties.m in Sources */,
 				35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
 				B8281E421D2656690047F8F1 /* MBFriendListViewController.m in Sources */,
 				35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */,
 				B8281E451D265C790047F8F1 /* MBFriedndListTableViewCell.m in Sources */,
+				B8281E571D2A507D0047F8F1 /* MBChatTableViewCell.m in Sources */,
 				355BBE061C701F63000CD082 /* MBBaseViewController.m in Sources */,
+				B8281E6B1D2B91D70047F8F1 /* HTTPService.m in Sources */,
 				355BBDEA1C701AEE000CD082 /* main.m in Sources */,
+				B8281E671D2B842B0047F8F1 /* MBRegisterViewController.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
 				B8281E481D2666170047F8F1 /* MBChatRoomViewController.m in Sources */,
+				B8281E631D2A75B10047F8F1 /* Fridend.m in Sources */,
 				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
 				B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */,
 				B8281E311D2620770047F8F1 /* Model.xcdatamodeld in Sources */,

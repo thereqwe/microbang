@@ -4,7 +4,7 @@
 # use_frameworks!
 
 target 'MicroBang' do
-pod ‘AFNetworking‘
+pod ‘AFNetworking‘,‘2.6.3‘
 pod ‘SDWebImage‘
 pod ‘MJRefresh‘
 pod ‘AMap2DMap‘

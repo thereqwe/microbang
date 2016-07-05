@@ -4,18 +4,16 @@
         <attribute name="avatar_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="create_time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="friend_mid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="idx" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Msg" representedClassName="Msg" syncable="YES">
         <attribute name="create_time" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="from_mid" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Msg" positionX="-54" positionY="-9" width="128" height="120"/>
-        <element name="Fridend" positionX="-36" positionY="45" width="128" height="120"/>
+        <element name="Msg" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Fridend" positionX="-36" positionY="45" width="128" height="103"/>
     </elements>
 </model>

@@ -10,6 +10,7 @@
 #import "MBMsgListTableViewCell.h"
 #import "MBFriendListViewController.h"
 #import "MBChatRoomViewController.h"
+#import "MBRegisterViewController.h"
 @implementation MBMsgListViewController
 {
     UITableView *ui_table_msg_list;
@@ -34,10 +35,20 @@
 - (void)setupUI
 {
     UIButton *friendBtn = [UIButton new];
-    friendBtn.frame = CGRectMake(0, 0, 20, 20);
+    friendBtn.frame = CGRectMake(0, 0, 50, 20);
     friendBtn.backgroundColor = [UIColor redColor];
+    [friendBtn setTitle:@"friend" forState:UIControlStateNormal];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:friendBtn];
     [friendBtn addTarget:self action:@selector(goToFriendList) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *logBtn = [UIButton new];
+    logBtn.frame = CGRectMake(0, 0, 50, 20);
+    logBtn.backgroundColor = [UIColor blueColor];
+    [logBtn setTitle:@"login" forState:UIControlStateNormal];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:logBtn];
+    [logBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
+    
+    
     
     ui_table_msg_list = [UITableView new];
     ui_table_msg_list.delegate = self;
@@ -58,6 +69,13 @@
     MBFriendListViewController *friendListViewController =[MBFriendListViewController new];
     [friendListViewController setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:friendListViewController animated:YES];
+}
+
+- (void)login
+{
+    MBRegisterViewController *registerViewController =[MBRegisterViewController new];
+    [registerViewController setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:registerViewController animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
