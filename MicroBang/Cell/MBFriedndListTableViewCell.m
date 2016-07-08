@@ -50,8 +50,9 @@
 
 - (void)setupData:(NSDictionary*)dict
 {
+    
     [ui_img_avatar sd_setImageWithURL:[NSURL URLWithString:@"http://wx.qlogo.cn/mmopen/iaRlzG8zy7BuGFSaxAAerrq4uv9q79fVVfmbNfuKqyMG8Aaclwibne2m3Kia2DEBOBKXvXCHRuXuWCjgwybRJlEpbjoSt6icmQ7b/0"]];
-    [ui_lb_name setText:@"leon"];
+    [ui_lb_name setText:dict[@"nickname"]];
 }
 
 @end

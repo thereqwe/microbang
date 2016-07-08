@@ -119,6 +119,8 @@ typedef NS_ENUM(NSInteger, liveViewMode) {
             }
         }
     }
+    NSString *mid = [[NSUserDefaults standardUserDefaults] objectForKey:@"mid"];
+    stringParameter = [stringParameter stringByAppendingFormat:@"&mid=%@",mid];
     return stringParameter;
 }
 

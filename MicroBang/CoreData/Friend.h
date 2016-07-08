@@ -1,8 +1,8 @@
 //
-//  Fridend.h
+//  Friend.h
 //  MicroBang
 //
-//  Created by Yue Shen on 16/7/4.
+//  Created by Yue Shen on 16/7/8.
 //  Copyright © 2016年 leon. All rights reserved.
 //
 
@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Fridend : NSManagedObject
+@interface Friend : NSManagedObject
 
 // Insert code here to declare functionality of your managed object subclass
 
@@ -19,4 +19,4 @@ NS_ASSUME_NONNULL_BEGIN
 
 NS_ASSUME_NONNULL_END
 
-#import "Fridend+CoreDataProperties.h"
+#import "Friend+CoreDataProperties.h"

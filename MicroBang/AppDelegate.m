@@ -10,7 +10,9 @@
 #import "MBBaseNavigationController.h"
 #import "MBBaseViewController.h"
 #import "MBMsgListViewController.h"
+#import "MBProfileViewController.h"
 #import "Msg.h"
+#import "Friend.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -35,8 +37,8 @@
     
     //个人设置中心
     PersonalNavi = [[MBBaseNavigationController alloc]init];
-    MBBaseViewController *personalIndexVc = [MBBaseViewController new];
-    [PersonalNavi pushViewController:personalIndexVc animated:NO];
+    MBProfileViewController *profileViewController = [MBProfileViewController new];
+    [PersonalNavi pushViewController:profileViewController animated:NO];
     
     baseTabBar = [[MBBaseTabBarController alloc]init];
     [baseTabBar setViewControllers:@[MessageNavi,PersonalNavi]];
@@ -50,6 +52,8 @@
 - (void)setupEnv {
     [MAMapServices sharedServices].apiKey = @"e590b8299c0475aaff1e3d58e3c22964";
     [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Model.sqlte"];
+    [Msg MR_findAll];
+    [Friend MR_truncateAll];
 //    Msg* msg = [Msg MR_createEntity];
 //    
 //    msg.from_mid=@"123";

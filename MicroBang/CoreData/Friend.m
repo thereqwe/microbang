@@ -1,14 +1,14 @@
 //
-//  Fridend.m
+//  Friend.m
 //  MicroBang
 //
-//  Created by Yue Shen on 16/7/4.
+//  Created by Yue Shen on 16/7/8.
 //  Copyright © 2016年 leon. All rights reserved.
 //
 
-#import "Fridend.h"
+#import "Friend.h"
 
-@implementation Fridend
+@implementation Friend
 
 // Insert code here to add functionality to your managed object subclass
 

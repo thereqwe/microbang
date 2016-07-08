@@ -10,6 +10,7 @@
 #import "MBBaseTabBarController.h"
 #import <AFNetworking/AFNetworking.h>
 #import <Masonry/Masonry.h>
+#import "HTTPService.h"
 #import <MJRefresh/MJRefresh.h>
 #import <UIImageView+WebCache.h>
 #import <UIButton+WebCache.h>
@@ -17,7 +18,7 @@
 #import "UIView+LZ.h"
 #import "UILabel+LZ.h"
 #import <MagicalRecord/MagicalRecord.h>
-#import "HTTPService.h"
+
 #define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #define RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]
 #define themeWhite RGBA(240, 240, 240, 1)

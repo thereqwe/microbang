@@ -11,6 +11,7 @@
 #import "MBFriendListViewController.h"
 #import "MBChatRoomViewController.h"
 #import "MBRegisterViewController.h"
+#import "MBLoginViewController.h"
 @implementation MBMsgListViewController
 {
     UITableView *ui_table_msg_list;
@@ -73,9 +74,9 @@
 
 - (void)login
 {
-    MBRegisterViewController *registerViewController =[MBRegisterViewController new];
-    [registerViewController setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:registerViewController animated:YES];
+    MBLoginViewController *loginViewController =[MBLoginViewController new];
+    [loginViewController setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:loginViewController animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

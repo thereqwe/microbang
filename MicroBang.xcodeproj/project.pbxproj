@@ -48,10 +48,13 @@
 		B8281E571D2A507D0047F8F1 /* MBChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E561D2A507D0047F8F1 /* MBChatTableViewCell.m */; };
 		B8281E601D2A75B10047F8F1 /* Msg+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E591D2A75B10047F8F1 /* Msg+CoreDataProperties.m */; };
 		B8281E611D2A75B10047F8F1 /* Msg.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E5B1D2A75B10047F8F1 /* Msg.m */; };
-		B8281E621D2A75B10047F8F1 /* Fridend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E5D1D2A75B10047F8F1 /* Fridend+CoreDataProperties.m */; };
-		B8281E631D2A75B10047F8F1 /* Fridend.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E5F1D2A75B10047F8F1 /* Fridend.m */; };
 		B8281E671D2B842B0047F8F1 /* MBRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E661D2B842B0047F8F1 /* MBRegisterViewController.m */; };
 		B8281E6B1D2B91D70047F8F1 /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E6A1D2B91D70047F8F1 /* HTTPService.m */; };
+		B8281E6E1D2BC4EE0047F8F1 /* MBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E6D1D2BC4EE0047F8F1 /* MBLoginViewController.m */; };
+		B8281E721D2E51B20047F8F1 /* MBAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E711D2E51B20047F8F1 /* MBAddFriendViewController.m */; };
+		B83D1D481D2F5ED8009E03BD /* Friend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D1D451D2F5ED8009E03BD /* Friend+CoreDataProperties.m */; };
+		B83D1D491D2F5ED8009E03BD /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D1D471D2F5ED8009E03BD /* Friend.m */; };
+		B83D1D4D1D2F8575009E03BD /* MBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D1D4C1D2F8575009E03BD /* MBProfileViewController.m */; };
 		B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA1871D2517C400333230 /* MBMsgListViewController.m */; };
 		B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B8EEA18A1D25223100333230 /* MBMsgListTableViewCell.m */; };
 		F7F4319A2AA0CA2B1D4A482F /* libPods-MicroBang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0578326EB56912D96F61DB52 /* libPods-MicroBang.a */; };
@@ -106,8 +109,8 @@
 		35E00FC91C771658000D32C1 /* UILabel+LZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LZ.m"; sourceTree = "<group>"; };
 		A66939EBD304926FBA05DC06 /* Pods-MicroBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MicroBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MicroBang/Pods-MicroBang.debug.xcconfig"; sourceTree = "<group>"; };
 		B8281E301D2620770047F8F1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		B8281E401D2656690047F8F1 /* MBFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFriendListViewController.h; sourceTree = "<group>"; };
-		B8281E411D2656690047F8F1 /* MBFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFriendListViewController.m; sourceTree = "<group>"; };
+		B8281E401D2656690047F8F1 /* MBFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBFriendListViewController.h; path = ../Message/MBFriendListViewController.h; sourceTree = "<group>"; };
+		B8281E411D2656690047F8F1 /* MBFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBFriendListViewController.m; path = ../Message/MBFriendListViewController.m; sourceTree = "<group>"; };
 		B8281E431D265C790047F8F1 /* MBFriedndListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBFriedndListTableViewCell.h; sourceTree = "<group>"; };
 		B8281E441D265C790047F8F1 /* MBFriedndListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBFriedndListTableViewCell.m; sourceTree = "<group>"; };
 		B8281E461D2666170047F8F1 /* MBChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBChatRoomViewController.h; sourceTree = "<group>"; };
@@ -118,14 +121,20 @@
 		B8281E591D2A75B10047F8F1 /* Msg+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Msg+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B8281E5A1D2A75B10047F8F1 /* Msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Msg.h; sourceTree = "<group>"; };
 		B8281E5B1D2A75B10047F8F1 /* Msg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Msg.m; sourceTree = "<group>"; };
-		B8281E5C1D2A75B10047F8F1 /* Fridend+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Fridend+CoreDataProperties.h"; sourceTree = "<group>"; };
-		B8281E5D1D2A75B10047F8F1 /* Fridend+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Fridend+CoreDataProperties.m"; sourceTree = "<group>"; };
-		B8281E5E1D2A75B10047F8F1 /* Fridend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fridend.h; sourceTree = "<group>"; };
-		B8281E5F1D2A75B10047F8F1 /* Fridend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fridend.m; sourceTree = "<group>"; };
 		B8281E651D2B842B0047F8F1 /* MBRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBRegisterViewController.h; sourceTree = "<group>"; };
 		B8281E661D2B842B0047F8F1 /* MBRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBRegisterViewController.m; sourceTree = "<group>"; };
 		B8281E691D2B91D70047F8F1 /* HTTPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
 		B8281E6A1D2B91D70047F8F1 /* HTTPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
+		B8281E6C1D2BC4EE0047F8F1 /* MBLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBLoginViewController.h; sourceTree = "<group>"; };
+		B8281E6D1D2BC4EE0047F8F1 /* MBLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBLoginViewController.m; sourceTree = "<group>"; };
+		B8281E701D2E51B20047F8F1 /* MBAddFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBAddFriendViewController.h; sourceTree = "<group>"; };
+		B8281E711D2E51B20047F8F1 /* MBAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAddFriendViewController.m; sourceTree = "<group>"; };
+		B83D1D441D2F5ED8009E03BD /* Friend+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Friend+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B83D1D451D2F5ED8009E03BD /* Friend+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Friend+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B83D1D461D2F5ED8009E03BD /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		B83D1D471D2F5ED8009E03BD /* Friend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		B83D1D4B1D2F8575009E03BD /* MBProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProfileViewController.h; sourceTree = "<group>"; };
+		B83D1D4C1D2F8575009E03BD /* MBProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProfileViewController.m; sourceTree = "<group>"; };
 		B8EEA1861D2517C400333230 /* MBMsgListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListViewController.h; sourceTree = "<group>"; };
 		B8EEA1871D2517C400333230 /* MBMsgListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListViewController.m; sourceTree = "<group>"; };
 		B8EEA1891D25223100333230 /* MBMsgListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListTableViewCell.h; sourceTree = "<group>"; };
@@ -247,6 +256,8 @@
 		355BBE021C701F08000CD082 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				B83D1D4A1D2F8435009E03BD /* Profile */,
+				B8281E6F1D2E3C1A0047F8F1 /* Friend */,
 				B8281E641D2B82E10047F8F1 /* Login */,
 				355BBE0F1C702757000CD082 /* Message */,
 			);
@@ -271,8 +282,6 @@
 			children = (
 				B8EEA1861D2517C400333230 /* MBMsgListViewController.h */,
 				B8EEA1871D2517C400333230 /* MBMsgListViewController.m */,
-				B8281E401D2656690047F8F1 /* MBFriendListViewController.h */,
-				B8281E411D2656690047F8F1 /* MBFriendListViewController.m */,
 				B8281E461D2666170047F8F1 /* MBChatRoomViewController.h */,
 				B8281E471D2666170047F8F1 /* MBChatRoomViewController.m */,
 			);
@@ -339,14 +348,14 @@
 		B8281E2E1D2620620047F8F1 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				B83D1D441D2F5ED8009E03BD /* Friend+CoreDataProperties.h */,
+				B83D1D451D2F5ED8009E03BD /* Friend+CoreDataProperties.m */,
+				B83D1D461D2F5ED8009E03BD /* Friend.h */,
+				B83D1D471D2F5ED8009E03BD /* Friend.m */,
 				B8281E581D2A75B10047F8F1 /* Msg+CoreDataProperties.h */,
 				B8281E591D2A75B10047F8F1 /* Msg+CoreDataProperties.m */,
 				B8281E5A1D2A75B10047F8F1 /* Msg.h */,
 				B8281E5B1D2A75B10047F8F1 /* Msg.m */,
-				B8281E5C1D2A75B10047F8F1 /* Fridend+CoreDataProperties.h */,
-				B8281E5E1D2A75B10047F8F1 /* Fridend.h */,
-				B8281E5D1D2A75B10047F8F1 /* Fridend+CoreDataProperties.m */,
-				B8281E5F1D2A75B10047F8F1 /* Fridend.m */,
 				B8281E2F1D2620770047F8F1 /* Model.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -357,8 +366,30 @@
 			children = (
 				B8281E651D2B842B0047F8F1 /* MBRegisterViewController.h */,
 				B8281E661D2B842B0047F8F1 /* MBRegisterViewController.m */,
+				B8281E6C1D2BC4EE0047F8F1 /* MBLoginViewController.h */,
+				B8281E6D1D2BC4EE0047F8F1 /* MBLoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		B8281E6F1D2E3C1A0047F8F1 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				B8281E401D2656690047F8F1 /* MBFriendListViewController.h */,
+				B8281E411D2656690047F8F1 /* MBFriendListViewController.m */,
+				B8281E701D2E51B20047F8F1 /* MBAddFriendViewController.h */,
+				B8281E711D2E51B20047F8F1 /* MBAddFriendViewController.m */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		B83D1D4A1D2F8435009E03BD /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				B83D1D4B1D2F8575009E03BD /* MBProfileViewController.h */,
+				B83D1D4C1D2F8575009E03BD /* MBProfileViewController.m */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		B8EEA18C1D25272900333230 /* chronos */ = {
@@ -513,11 +544,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				355BBE441C71D615000CD082 /* UIView+LZ.m in Sources */,
+				B83D1D4D1D2F8575009E03BD /* MBProfileViewController.m in Sources */,
 				B8281E601D2A75B10047F8F1 /* Msg+CoreDataProperties.m in Sources */,
+				B8281E6E1D2BC4EE0047F8F1 /* MBLoginViewController.m in Sources */,
+				B83D1D491D2F5ED8009E03BD /* Friend.m in Sources */,
 				B8EEA1881D2517C400333230 /* MBMsgListViewController.m in Sources */,
 				B8281E611D2A75B10047F8F1 /* Msg.m in Sources */,
+				B8281E721D2E51B20047F8F1 /* MBAddFriendViewController.m in Sources */,
 				355BBDF01C701AEE000CD082 /* ViewController.m in Sources */,
-				B8281E621D2A75B10047F8F1 /* Fridend+CoreDataProperties.m in Sources */,
 				35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
 				B8281E421D2656690047F8F1 /* MBFriendListViewController.m in Sources */,
@@ -530,9 +564,9 @@
 				B8281E671D2B842B0047F8F1 /* MBRegisterViewController.m in Sources */,
 				355BBE091C701FD9000CD082 /* MBBaseNavigationController.m in Sources */,
 				B8281E481D2666170047F8F1 /* MBChatRoomViewController.m in Sources */,
-				B8281E631D2A75B10047F8F1 /* Fridend.m in Sources */,
 				355BBE0D1C7025EE000CD082 /* MBBaseTabBarController.m in Sources */,
 				B8EEA18B1D25223100333230 /* MBMsgListTableViewCell.m in Sources */,
+				B83D1D481D2F5ED8009E03BD /* Friend+CoreDataProperties.m in Sources */,
 				B8281E311D2620770047F8F1 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
