@@ -96,9 +96,9 @@
         if([responseObject[@"errCode"] isEqualToString:@"000"]){
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alert show];
-            [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"mid"] forKey:@"mid"];
-            [[NSUserDefaults standardUserDefaults] setObject:responseObject[@"nickname"] forKey:@"nickname"];
-            [[NSUserDefaults standardUserDefaults]synchronize];
+            [MBUserConfig sharedInstance].mid = responseObject[@"mid"];
+            [MBUserConfig sharedInstance].avatar_url = responseObject[@"avatar_url"];
+            [MBUserConfig sharedInstance].nickname = responseObject[@"nickname"];
         }else{
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alert show];

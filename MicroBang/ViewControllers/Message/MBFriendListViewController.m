@@ -20,7 +20,7 @@
 - (void)setupData
 {
     dataArr =[NSMutableArray new];
-    NSString *mid = [[NSUserDefaults standardUserDefaults] objectForKey:@"mid"];
+    NSString *mid = [MBUserConfig sharedInstance].mid;
     NSDictionary *dict = @{@"mid":mid,@"action":@"getFriendList"};
     [[HTTPService Instance] mobilePOST:SERVER_URL
                                   path:@"/responder.php"
@@ -34,6 +34,7 @@
                                                friend.nickname = dict[@"nickname"];
                                                friend.create_time = [NSDate date];
                                                friend.friend_mid = dict[@"friend_mid"];
+                                               friend.avatar_url = dict[@"avatar_url"];
                                                [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
                                        }
                                        [dataArr addObjectsFromArray:[Friend MR_findAll]];
@@ -87,7 +88,8 @@
     MBFriedndListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Friend *friend = dataArr[indexPath.row];
     NSDictionary *dict = @{
-                           @"nickname":friend.nickname
+                           @"nickname":friend.nickname,
+                           @"avatar_url":friend.avatar_url
                            };
     [cell setupData:dict];
     return cell;

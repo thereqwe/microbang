@@ -51,7 +51,7 @@
 
 - (void)setupEnv {
     [MAMapServices sharedServices].apiKey = @"e590b8299c0475aaff1e3d58e3c22964";
-    [MagicalRecord setupCoreDataStackWithAutoMigratingSqliteStoreNamed:@"Model.sqlte"];
+    [MagicalRecord setupCoreDataStackWithStoreNamed:@"Model.sqlte"];
     [Msg MR_findAll];
     [Friend MR_truncateAll];
 //    Msg* msg = [Msg MR_createEntity];
