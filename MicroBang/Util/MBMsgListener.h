@@ -1,5 +1,5 @@
 //
-//  SocketService.h
+//  MBMsgListener.h
 //  MicroBang
 //
 //  Created by Yue Shen on 16/7/12.
@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CocoaAsyncSocket/AsyncUdpSocket.h>
-@interface SocketService : AsyncUdpSocket
+
+@interface MBMsgListener : NSObject
 + (instancetype)sharedInstance;
+- (void)getNewMsg;
 @end

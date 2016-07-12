@@ -53,6 +53,7 @@
 		B8281E6E1D2BC4EE0047F8F1 /* MBLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E6D1D2BC4EE0047F8F1 /* MBLoginViewController.m */; };
 		B8281E721D2E51B20047F8F1 /* MBAddFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B8281E711D2E51B20047F8F1 /* MBAddFriendViewController.m */; };
 		B8298E251D348FF90064AB3C /* SocketService.m in Sources */ = {isa = PBXBuildFile; fileRef = B8298E241D348FF90064AB3C /* SocketService.m */; };
+		B8298E281D34FC960064AB3C /* MBMsgListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B8298E271D34FC960064AB3C /* MBMsgListener.m */; };
 		B83D1D481D2F5ED8009E03BD /* Friend+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D1D451D2F5ED8009E03BD /* Friend+CoreDataProperties.m */; };
 		B83D1D491D2F5ED8009E03BD /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D1D471D2F5ED8009E03BD /* Friend.m */; };
 		B83D1D4D1D2F8575009E03BD /* MBProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B83D1D4C1D2F8575009E03BD /* MBProfileViewController.m */; };
@@ -133,6 +134,8 @@
 		B8281E711D2E51B20047F8F1 /* MBAddFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBAddFriendViewController.m; sourceTree = "<group>"; };
 		B8298E231D348FF90064AB3C /* SocketService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocketService.h; sourceTree = "<group>"; };
 		B8298E241D348FF90064AB3C /* SocketService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocketService.m; sourceTree = "<group>"; };
+		B8298E261D34FC960064AB3C /* MBMsgListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBMsgListener.h; sourceTree = "<group>"; };
+		B8298E271D34FC960064AB3C /* MBMsgListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBMsgListener.m; sourceTree = "<group>"; };
 		B83D1D441D2F5ED8009E03BD /* Friend+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Friend+CoreDataProperties.h"; sourceTree = "<group>"; };
 		B83D1D451D2F5ED8009E03BD /* Friend+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Friend+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B83D1D461D2F5ED8009E03BD /* Friend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				B8281E6A1D2B91D70047F8F1 /* HTTPService.m */,
 				B8298E231D348FF90064AB3C /* SocketService.h */,
 				B8298E241D348FF90064AB3C /* SocketService.m */,
+				B8298E261D34FC960064AB3C /* MBMsgListener.h */,
+				B8298E271D34FC960064AB3C /* MBMsgListener.m */,
 				355BBE421C71D615000CD082 /* UIView+LZ.h */,
 				355BBE431C71D615000CD082 /* UIView+LZ.m */,
 				35E00FC81C771658000D32C1 /* UILabel+LZ.h */,
@@ -567,6 +572,7 @@
 				35E00FCA1C771658000D32C1 /* UILabel+LZ.m in Sources */,
 				355BBDED1C701AEE000CD082 /* AppDelegate.m in Sources */,
 				B8281E421D2656690047F8F1 /* MBFriendListViewController.m in Sources */,
+				B8298E281D34FC960064AB3C /* MBMsgListener.m in Sources */,
 				35E00FBE1C76C6B1000D32C1 /* msgModel.m in Sources */,
 				B8281E451D265C790047F8F1 /* MBFriedndListTableViewCell.m in Sources */,
 				B8281E571D2A507D0047F8F1 /* MBChatTableViewCell.m in Sources */,

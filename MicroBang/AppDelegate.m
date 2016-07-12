@@ -14,6 +14,7 @@
 #import "Msg.h"
 #import "Friend.h"
 #import "SocketService.h"
+#import  "MBMsgListener.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -52,11 +53,12 @@
 
 - (void)setupEnv {
     [SocketService sharedInstance].delegate = self;
-    [[SocketService sharedInstance] connectToHost:@"30.97.16.232" onPort:10006 withTimeout:-1 error:nil];
+    [[SocketService sharedInstance] connectToHost:@"30.97.16.232" onPort:10006 error:nil];
     [MAMapServices sharedServices].apiKey = @"e590b8299c0475aaff1e3d58e3c22964";
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"Model.sqlte"];
     [Msg MR_findAll];
     [Friend MR_truncateAll];
+    [[MBMsgListener sharedInstance] getNewMsg];
 //    Msg* msg = [Msg MR_createEntity];
 //    
 //    msg.from_mid=@"123";
@@ -98,14 +100,4 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-- (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
-{
-    NSLog(@"%s",__func__);
-}
-
-#pragma mark- socket delegate
-- (void)onSocketDidDisconnect:(AsyncSocket *)sock
-{
-    NSLog(@"^^^^^^^%s",__func__);
-}
 @end

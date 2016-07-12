@@ -11,9 +11,10 @@
 #import "Msg.h"
 #import "msgModel.h"
 #import "SocketService.h"
+#import <CocoaAsyncSocket/AsyncUdpSocket.h>
 @interface MBChatRoomViewController ()
 <
-AsyncSocketDelegate,
+AsyncUdpSocketDelegate,
 UITableViewDelegate,
 UITableViewDataSource
 >
@@ -22,7 +23,7 @@ UITableViewDataSource
     UITextView *ui_tv_msg;
     UIView *ui_view_input_bar;
     UIButton *ui_btn_send;
-    AsyncSocket *socket;
+    AsyncUdpSocket *socket;
     NSTimer *connectTimer;
     NSMutableArray *dataArr;
 }
@@ -128,7 +129,7 @@ UITableViewDataSource
 - (void)sendMsg
 {
     NSString *msgStr = [NSString stringWithFormat:@"%@ \r\n",ui_tv_msg.text];
-    int x = arc4random() % 100;
+    int x = arc4random() % 1000;
     Msg* msg = [Msg MR_createEntity];
     msg.from_mid=@"86";
     msg.text=msgStr;
@@ -140,9 +141,9 @@ UITableViewDataSource
     NSString *mid = [MBUserConfig sharedInstance].mid;
     NSString *to_mid = @"3";
     msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
-    NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@"\r"];
+    NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@""];
     NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
-    [socket writeData:data withTimeout:2 tag:x];
+    [socket sendData:data withTimeout:-1 tag:x];
 }
 
 - (void)setupData
@@ -172,34 +173,19 @@ UITableViewDataSource
 }
 
 #pragma mark- socket delegate
-- (void)onSocketDidDisconnect:(AsyncSocket *)sock
-{
-      NSLog(@"^^^^^^^%s",__func__);
-}
 
-- (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
+
+
+/**
+ * Called when the datagram with the given tag has been sent.
+ **/
+- (void)onUdpSocket:(AsyncUdpSocket *)sock didSendDataWithTag:(long)tag;
 {
     NSLog(@"%s",__func__);
-    NSLog(@"!!!!!!!!!%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
-}
-
-- (void)onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag
-{
-    NSLog(@"%s",__func__);
-    [sock readDataWithTimeout:-1 tag:tag];
     [ui_table_chat reloadData];
     [self goTail];
 }
 
-- (void)onSocket:(AsyncSocket *)sock didConnectToHost:(NSString *)host port:(UInt16)port
-{
-    NSLog(@"%s",__func__);
-   // [socket writeData:[@"ooook" dataUsingEncoding:NSUTF8StringEncoding] withTimeout:-1 tag:1000];
-    // 每隔30s像服务器发送心跳包
-//    connectTimer = [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(longConnectToSocket) userInfo:nil repeats:YES];// 在longConnectToSocket方法中进行长连接需要向服务器发送的讯息
-//    
-//    [connectTimer fire];
-}
 
 #pragma mark- table delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -224,16 +210,4 @@ UITableViewDataSource
 {
     [self.view.window endEditing:YES];
 }
-
-//-(void)longConnectToSocket{
-//    
-//    // 根据服务器要求发送固定格式的数据，假设为指令@"longConnect"，但是一般不会是这么简单的指令
-//    
-//    NSString *longConnect = @"longConnect";
-//    
-//    NSData   *dataStream  = [longConnect dataUsingEncoding:NSUTF8StringEncoding];
-//    
-//  //  [socket writeData:dataStream withTimeout:1 tag:1];
-//    
-//}
 @end
