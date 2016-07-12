@@ -10,7 +10,7 @@
 #import "MBChatTableViewCell.h"
 #import "Msg.h"
 #import "msgModel.h"
-#import <CocoaAsyncSocket/AsyncSocket.h>
+#import "SocketService.h"
 @interface MBChatRoomViewController ()
 <
 AsyncSocketDelegate,
@@ -72,13 +72,13 @@ UITableViewDataSource
 
 - (void)goTail
 {
-    int *idx = ([dataArr count]-1);
-    if (idx<0) {
-        idx=0;
-    }
-    [ui_table_chat scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]
-                         atScrollPosition:UITableViewScrollPositionBottom
-                                 animated:NO];
+//    int *idx = ([dataArr count]-1);
+//    if (idx<0) {
+//        idx=0;
+//    }
+//    [ui_table_chat scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]
+//                         atScrollPosition:UITableViewScrollPositionBottom
+//                                 animated:NO];
 }
 
 - (void)setupUI
@@ -136,13 +136,18 @@ UITableViewDataSource
     msg.type = msg_text;
     [dataArr addObject:msg];
     [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
-    [socket writeData:[msgStr dataUsingEncoding:NSUTF8StringEncoding] withTimeout:2 tag:x];
+    
+    NSString *mid = [MBUserConfig sharedInstance].mid;
+    NSString *to_mid = @"3";
+    msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
+    NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@"\r"];
+    NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
+    [socket writeData:data withTimeout:2 tag:x];
 }
 
 - (void)setupData
 {
-    socket = [[AsyncSocket alloc]initWithDelegate:self];
-    [socket connectToHost:@"30.97.16.232" onPort:10005 withTimeout:-1 error:nil];
+    socket = [SocketService sharedInstance];
     socket.delegate = self;
     dataArr = [NSMutableArray new];
     [self getLocalChatHistoryWithPage:0];
@@ -169,13 +174,13 @@ UITableViewDataSource
 #pragma mark- socket delegate
 - (void)onSocketDidDisconnect:(AsyncSocket *)sock
 {
-      NSLog(@"%s",__func__);
+      NSLog(@"^^^^^^^%s",__func__);
 }
 
 - (void)onSocket:(AsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag
 {
     NSLog(@"%s",__func__);
-    NSLog(@"%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
+    NSLog(@"!!!!!!!!!%@",[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 - (void)onSocket:(AsyncSocket *)sock didWriteDataWithTag:(long)tag

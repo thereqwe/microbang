@@ -103,6 +103,34 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     UIImage* edit = [info objectForKey:UIImagePickerControllerEditedImage];
     NSLog(@"%@,%@",original,edit);
     [picker dismissViewControllerAnimated:YES completion:nil];
+    
+    NSDictionary *dict = @{@"mid":[MBUserConfig sharedInstance].mid};
+    AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]init];
+    manager.responseSerializer = [[AFJSONResponseSerializer alloc] init];
+//    manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", @"text/json", @"application/json", @"text/javascript", @"text/plain", nil];
+    AFHTTPRequestOperation *op = [manager POST:[NSString stringWithFormat:@"%@/%@",SERVER_URL,@"imageUpload.php"] parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        NSData *imageData = UIImageJPEGRepresentation(edit, 1);
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        NSString *fileName = [NSString stringWithFormat:@"%@.jpg", str];
+        
+        // 上传图片，以文件流的格式
+        [formData appendPartWithFileData:imageData name:@"file" fileName:fileName mimeType:@"image/jpeg"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSData *data = responseObject  ;
+       // NSLog(@"%@",[[NSString alloc]initWithData:data encoding:kCFStringEncodingUTF8]);
+        if([responseObject[@"errCode"] isEqualToString:@"000"]){
+            avatar_url = responseObject[@"avatar_url"];
+            avatar_url = [NSString stringWithFormat:@"%@%@",SERVER_URL,avatar_url];
+            [ui_btn_avatar sd_setImageWithURL:[NSURL URLWithString:avatar_url] forState:UIControlStateNormal];
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"err %@",error);
+    }];
+
 }
 
 - (void)doEditProfile
