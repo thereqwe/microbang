@@ -70,9 +70,9 @@
 
 - (void)setupData:(NSDictionary*)dict
 {
-    [ui_img_avatar sd_setImageWithURL:[NSURL URLWithString:@"http://wx.qlogo.cn/mmopen/iaRlzG8zy7BuGFSaxAAerrq4uv9q79fVVfmbNfuKqyMG8Aaclwibne2m3Kia2DEBOBKXvXCHRuXuWCjgwybRJlEpbjoSt6icmQ7b/0"]];
-    [ui_lb_name setText:@"leon"];
-    [ui_lb_msg setText:@"ni hao hello world"];
-    [ui_lb_pubilic_time setText:@"2015-06-25 16:25:48"];
+    [ui_img_avatar sd_setImageWithURL:[NSURL URLWithString:dict[@"avatar_url"]]];
+    [ui_lb_name setText:dict[@"nickname"]];
+    [ui_lb_msg setText:dict[@"msg"]];
+    [ui_lb_pubilic_time setText:dict[@"create_time"]];
 }
 @end

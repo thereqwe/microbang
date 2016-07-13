@@ -12,4 +12,8 @@
 @property (nonatomic,strong)NSString *nickname;
 @property (nonatomic,strong)NSString *friend_mid;
 @property (nonatomic,strong)NSString *creat_time;
++(BOOL)insertDB:(NSString*)nickname
+     friend_mid:(NSString*)friend_mid
+    create_time:(NSString*)create_time
+     avatar_url:(NSString*)avatar_url;
 @end

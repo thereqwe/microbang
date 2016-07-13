@@ -15,6 +15,7 @@
 @implementation MBMsgListViewController
 {
     UITableView *ui_table_msg_list;
+    NSMutableArray *dataArr;
 }
 - (instancetype)init
 {
@@ -30,7 +31,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setupData];
     [self setupUI];
+}
+
+- (void)setupData
+{
+    dataArr = [NSMutableArray new];
+    NSString *sql = @"select * from (select * from mb_msg order by create_time desc) as t1 left join mb_friend as t2 on t1.from_mid = t2.friend_mid group by t1.from_mid order by t1.create_time desc";
+    FMResultSet *set = [[FMDBService sharedInstance] executeQuery:sql];
+    NSLog(@"%@",[FMDBService sharedInstance].lastErrorMessage);
+    NSLog(@"%@",[FMDBService sharedInstance].lastError);
+    while ([set next]) {
+        NSString *msg = [set stringForColumn:@"msg"];
+        NSString *avatar_url = [set stringForColumn:@"avatar_url"];
+        NSString *nickname = [set stringForColumn:@"nickname"];
+        NSString *create_time = [set stringForColumn:@"create_time"];
+        [dataArr addObject:@{@"msg":msg,@"nickname":nickname,@"avatar_url":avatar_url,@"create_time":create_time}];
+    }
+    [ui_table_msg_list reloadData];
 }
 
 - (void)setupUI
@@ -81,13 +100,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 50;
+    return [dataArr  count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MBMsgListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    [cell setupData:nil];
+    [cell setupData:dataArr[indexPath.row]];
     return  cell;
 }
 

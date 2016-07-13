@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MBMsgListener : NSObject
+@interface MBListener : NSObject
 + (instancetype)sharedInstance;
 - (void)getNewMsg;
+- (void)startListen;
 @end

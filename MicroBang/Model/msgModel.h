@@ -15,6 +15,9 @@ typedef NS_ENUM(NSUInteger, MsgType) {
 @interface msgModel : NSObject
 @property (nonatomic,strong)NSString *msg;
 @property (nonatomic,strong)NSString *create_time;
-@property (nonatomic,strong)NSString *from_mid;
--(BOOL)insertDB:(NSString*)msg from_mid:(NSString*)from_mid create_time:(NSString*)create_time;
+@property (nonatomic,strong)NSString *from_mid;   //谁发来
+@property (nonatomic,strong)NSString *to_mid;     //向谁发
+@property (nonatomic,strong)NSString *friend_mid; //和哪个朋友的聊天~ 用来区分聊天!!!
++(BOOL)insert:(NSString*)msg from_mid:(NSString*)from_mid create_time:(NSString*)create_time
+       to_mid:(NSString*)to_mid friend_mid:(NSString*)friend_mid;
 @end

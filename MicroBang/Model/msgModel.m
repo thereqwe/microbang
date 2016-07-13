@@ -9,11 +9,12 @@
 #import "msgModel.h"
 #import "FMDBService.h"
 @implementation msgModel
--(BOOL)insert:(NSString*)msg from_mid:(NSString*)from_mid create_time:(NSString*)create_time
++(BOOL)insert:(NSString*)msg from_mid:(NSString*)from_mid create_time:(NSString*)create_time
+       to_mid:(NSString*)to_mid friend_mid:(NSString*)friend_mid
 {
     NSString *insertSql2 = [NSString stringWithFormat:
-                            @"INSERT INTO %@(%@, %@, %@) VALUES ('%@', '%@', '%@')",
-                            @"msg", @"msg", @"from_mid", @"create_time", msg, from_mid, create_time];
+                            @"INSERT INTO %@(%@, %@, %@,%@,%@) VALUES ('%@', '%@', '%@','%@','%@')",
+                            @"mb_msg", @"msg", @"from_mid", @"create_time",@"to_mid",@"friend_mid" ,msg, from_mid, create_time,to_mid,friend_mid];
    return [[FMDBService sharedInstance] executeUpdate:insertSql2];
 }
 @end

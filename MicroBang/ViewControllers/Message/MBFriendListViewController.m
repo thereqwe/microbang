@@ -19,22 +19,17 @@
 - (void)setupData
 {
     dataArr =[NSMutableArray new];
-    NSString *mid = [MBUserConfig sharedInstance].mid;
-    NSDictionary *dict = @{@"mid":mid,@"action":@"getFriendList"};
-    [[HTTPService Instance] mobilePOST:SERVER_URL
-                                  path:@"/responder.php"
-                            parameters:[dict mutableCopy]
-                               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-                                   id data = responseObject[@"data"];
-                                   if([data isKindOfClass:[NSArray class]]){
-                                       for(NSDictionary *dict in data){
-                                           
-                                       }
-                                       [ui_table_friend reloadData];
-                                   }
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    FMResultSet * set = [[FMDBService sharedInstance] executeQuery:@"select * from mb_friend where 1"];
+    while ([set next]) {
+        NSDictionary *dict = @{
+                               @"nickname":[set stringForColumn:@"nickname"],
+                               @"create_time":[set stringForColumn:@"create_time"],
+                               @"avatar_url":[set stringForColumn:@"avatar_url"],
+                               @"friend_mid":[set stringForColumn:@"friend_mid"],
+                             };
         
-    }];
+        [dataArr addObject:dict];
+    }
 }
 
 - (void)viewDidLoad
@@ -78,7 +73,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MBFriedndListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    NSDictionary *dict = nil;
+    NSDictionary *dict = dataArr[indexPath.row];
     [cell setupData:dict];
     return cell;
 }
