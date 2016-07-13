@@ -31,10 +31,13 @@
 
 - (void)getNewMsg
 {
+    isListening =YES;
     NSDictionary *dict = @{@"action":@"getNewMsg",@"mid":[MBUserConfig sharedInstance].mid};
     [[HTTPService Instance] mobilePOST:SERVER_URL path:@"/responder.php" parameters:[dict mutableCopy] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         isListening=NO;
         NSLog(@"%@",responseObject);
+        for (NSDictionary *dict in responseObject[@"data"]) {
+        }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         isListening=NO;
     }];

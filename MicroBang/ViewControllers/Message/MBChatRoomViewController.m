@@ -8,7 +8,6 @@
 
 #import "MBChatRoomViewController.h"
 #import "MBChatTableViewCell.h"
-#import "Msg.h"
 #import "msgModel.h"
 #import "SocketService.h"
 #import <CocoaAsyncSocket/AsyncUdpSocket.h>
@@ -130,14 +129,6 @@ UITableViewDataSource
 {
     NSString *msgStr = [NSString stringWithFormat:@"%@ \r\n",ui_tv_msg.text];
     int x = arc4random() % 1000;
-    Msg* msg = [Msg MR_createEntity];
-    msg.from_mid=@"86";
-    msg.text=msgStr;
-    msg.create_time = [NSDate date];
-    msg.type = msg_text;
-    [dataArr addObject:msg];
-    [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
-    
     NSString *mid = [MBUserConfig sharedInstance].mid;
     NSString *to_mid = @"3";
     msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
@@ -156,20 +147,7 @@ UITableViewDataSource
 
 - (void)getLocalChatHistoryWithPage:(NSUInteger)page
 {
-    //获取查询条件
-    NSFetchRequest * request = [Msg MR_requestAll];
-    //设置排序字段
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"create_time" ascending:NO];
-    //设置排序数组
-    [request setSortDescriptors:@[sortDescriptor]];
-    //设置分页查询数目
-    [request setFetchLimit:10];
-    //设置查询起始
-    [request setFetchOffset:page*10];
-    //执行查询语句 并返回数组
-    NSArray * arrayss = [Msg MR_executeFetchRequest:request];
-    NSArray* reversedArray = [[arrayss reverseObjectEnumerator] allObjects];
-    [dataArr addObjectsFromArray:reversedArray];
+
 }
 
 #pragma mark- socket delegate
@@ -201,8 +179,7 @@ UITableViewDataSource
     }else{
         cell.contentView.backgroundColor = [UIColor brownColor];
     }
-    Msg *msg = dataArr[indexPath.row];
-    [cell setupDataWithDict:@{@"text":msg.text}];
+    [cell setupDataWithDict:nil];
     return cell;
 }
 

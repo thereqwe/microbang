@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Xcode 7.0">
+    <entity name="FreshMsg" representedClassName="FreshMsg" syncable="YES">
+        <attribute name="create_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="from_mid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="text" optional="YES" syncable="YES"/>
+    </entity>
     <entity name="Friend" representedClassName="Friend" syncable="YES">
         <attribute name="avatar_url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="create_time" optional="YES" attributeType="Date" syncable="YES"/>
@@ -13,7 +18,8 @@
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Msg" positionX="-54" positionY="-9" width="128" height="103"/>
         <element name="Friend" positionX="-45" positionY="27" width="128" height="105"/>
+        <element name="Msg" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="FreshMsg" positionX="-45" positionY="36" width="128" height="90"/>
     </elements>
 </model>

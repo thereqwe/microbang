@@ -11,5 +11,6 @@ pod ‘AMap2DMap‘
 pod ‘Masonry‘
 pod ‘CocoaAsyncSocket‘
 pod ‘MagicalRecord‘
+pod ‘FMDB‘
 end
 

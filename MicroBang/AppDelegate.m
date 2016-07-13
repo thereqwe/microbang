@@ -11,10 +11,9 @@
 #import "MBBaseViewController.h"
 #import "MBMsgListViewController.h"
 #import "MBProfileViewController.h"
-#import "Msg.h"
-#import "Friend.h"
 #import "SocketService.h"
 #import  "MBMsgListener.h"
+#import  "FMDBService.h"
 @interface AppDelegate ()
 {
     MBBaseNavigationController *NearNavi;
@@ -52,24 +51,22 @@
 }
 
 - (void)setupEnv {
+    /******************udp socket**********************/
     [SocketService sharedInstance].delegate = self;
     [[SocketService sharedInstance] connectToHost:@"30.97.16.232" onPort:10006 error:nil];
+    /******************高德地图**********************/
     [MAMapServices sharedServices].apiKey = @"e590b8299c0475aaff1e3d58e3c22964";
-    [MagicalRecord setupCoreDataStackWithStoreNamed:@"Model.sqlte"];
-    [Msg MR_findAll];
-    [Friend MR_truncateAll];
+    /******************msg listen**********************/
     [[MBMsgListener sharedInstance] getNewMsg];
-//    Msg* msg = [Msg MR_createEntity];
-//    
-//    msg.from_mid=@"123";
-//    
-//    msg.text=@"hi";
-//    
-//    [[NSManagedObjectContext MR_defaultContext]MR_saveToPersistentStoreAndWait];
-//    NSArray* pers_ALL = [Msg MR_findAll];
-//    msg = pers_ALL[0];
-//    NSLog(@"%@",msg.text);
-    
+    /******************FMDB**********************/
+    [[FMDBService sharedInstance] open];
+    //msg
+    BOOL rst = [[FMDBService sharedInstance] executeUpdate:@"create table if not exists mb_msg(id integer primary key  autoincrement, msg text,from_mid varchar(256),create_time datetime)"];
+    //friend
+    BOOL rst2 = [[FMDBService sharedInstance] executeUpdate:@"create table if not exists mb_friend(id integer primary key  autoincrement, nickname varchar(256),friend_mid varchar(256),avatar_url varchar(1024) ,create_time datetime)"];
+    if (rst&&rst2) {
+        NSLog(@"FMDB 初始化成功");
+    }
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -99,5 +96,6 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end

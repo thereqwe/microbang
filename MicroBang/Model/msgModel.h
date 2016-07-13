@@ -13,8 +13,8 @@ typedef NS_ENUM(NSUInteger, MsgType) {
     msg_img
 };
 @interface msgModel : NSObject
-@property (nonatomic,strong)NSString *text;
+@property (nonatomic,strong)NSString *msg;
 @property (nonatomic,strong)NSString *create_time;
-@property (nonatomic,assign)MsgType type;
 @property (nonatomic,strong)NSString *from_mid;
+-(BOOL)insertDB:(NSString*)msg from_mid:(NSString*)from_mid create_time:(NSString*)create_time;
 @end
