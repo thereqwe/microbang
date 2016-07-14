@@ -139,7 +139,7 @@ UITableViewDataSource
     int x = arc4random() % 1000;
     NSString *mid = [MBUserConfig sharedInstance].mid;
     NSString *to_mid = friend_mid;
-  //  msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
+    msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
     NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@""];
     NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
     [socket sendData:data withTimeout:-1 tag:x];
