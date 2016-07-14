@@ -80,13 +80,13 @@ UITableViewDataSource
 
 - (void)goTail
 {
-//    int *idx = ([dataArr count]-1);
-//    if (idx<0) {
-//        idx=0;
-//    }
-//    [ui_table_chat scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]
-//                         atScrollPosition:UITableViewScrollPositionBottom
-//                                 animated:NO];
+    int idx = ([dataArr count]-1);
+    if (idx<0) {
+        idx=0;
+    }
+    [ui_table_chat scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]
+                         atScrollPosition:UITableViewScrollPositionBottom
+                                 animated:NO];
 }
 
 - (void)setupUI
@@ -139,7 +139,7 @@ UITableViewDataSource
     int x = arc4random() % 1000;
     NSString *mid = [MBUserConfig sharedInstance].mid;
     NSString *to_mid = friend_mid;
-    msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
+  //  msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
     NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@""];
     NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
     [socket sendData:data withTimeout:-1 tag:x];
@@ -178,6 +178,7 @@ UITableViewDataSource
         [dataArr addObject:dict];
     }
     [ui_table_chat reloadData];
+    [self performSelector:@selector(goTail) withObject:nil afterDelay:0.5];
 }
 
 #pragma mark- socket delegate
