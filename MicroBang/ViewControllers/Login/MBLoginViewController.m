@@ -99,12 +99,16 @@
             [MBUserConfig sharedInstance].mid = responseObject[@"mid"];
             [MBUserConfig sharedInstance].avatar_url = responseObject[@"avatar_url"];
             [MBUserConfig sharedInstance].nickname = responseObject[@"nickname"];
+            [self dismissViewControllerAnimated:YES completion:^{
+                
+            }];
         }else{
             UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
             [alert show];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        //
+        UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:@"服务器睡着了zZ" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+        [alert show];
     }];
 }
 

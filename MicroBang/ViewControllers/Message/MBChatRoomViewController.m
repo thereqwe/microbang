@@ -138,18 +138,30 @@ UITableViewDataSource
     NSString *msgStr = [NSString stringWithFormat:@"%@ \r\n",ui_tv_msg.text];
     int x = arc4random() % 1000;
     NSString *mid = [MBUserConfig sharedInstance].mid;
-    NSString *to_mid = @"3";
+    NSString *to_mid = friend_mid;
     msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
     NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@""];
     NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
     [socket sendData:data withTimeout:-1 tag:x];
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSString *create_time = [formatter stringFromDate:[NSDate date]];
+    [msgModel insert:msgStr from_mid:mid create_time:create_time to_mid:to_mid friend_mid:friend_mid];
+    [self getMsgWithPage:0];
 }
 
 - (void)setupData
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receiveMsg) name:kNewMsgIncoming object:nil];
+    
     socket = [SocketService sharedInstance];
     socket.delegate = self;
     dataArr = [NSMutableArray new];
+    [self getMsgWithPage:0];
+}
+
+- (void)receiveMsg
+{
     [self getMsgWithPage:0];
 }
 
@@ -157,12 +169,15 @@ UITableViewDataSource
 {
     NSString *sql = [NSString stringWithFormat:@"select * from mb_msg where friend_mid=%@",friend_mid];
     FMResultSet *set=[[FMDBService sharedInstance] executeQuery:sql];
+     [dataArr removeAllObjects];
     while ([set next]) {
         NSDictionary *dict =@{
                               @"msg":[set stringForColumn:@"msg"]
         };
+       
         [dataArr addObject:dict];
     }
+    [ui_table_chat reloadData];
 }
 
 #pragma mark- socket delegate

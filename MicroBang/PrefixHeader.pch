@@ -31,6 +31,8 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define kNewMsgIncoming @"notification_new_msg_come"
+
 #define SERVER_URL @"http://30.97.16.232:8887"
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch

@@ -38,7 +38,7 @@
 - (void)setupData
 {
     dataArr = [NSMutableArray new];
-    NSString *sql = @"select * from (select * from mb_msg order by create_time desc) as t1 left join mb_friend as t2 on t1.from_mid = t2.friend_mid group by t1.from_mid order by t1.create_time desc";
+    NSString *sql = @"select * from (select * from mb_msg order by create_time desc) as t1 left join mb_friend as t2 on t1.from_mid = t2.friend_mid group by t1.from_mid having nickname is not null order by t1.create_time desc";
     FMResultSet *set = [[FMDBService sharedInstance] executeQuery:sql];
     NSLog(@"%@",[FMDBService sharedInstance].lastErrorMessage);
     NSLog(@"%@",[FMDBService sharedInstance].lastError);

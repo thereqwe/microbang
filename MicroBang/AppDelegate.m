@@ -11,6 +11,7 @@
 #import "MBBaseViewController.h"
 #import "MBMsgListViewController.h"
 #import "MBProfileViewController.h"
+#import "MBLoginViewController.h"
 #import "SocketService.h"
 #import  "MBListener.h"
 #import  "FMDBService.h"
@@ -45,9 +46,16 @@
     [baseTabBar setViewControllers:@[MessageNavi,PersonalNavi]];
     MessageNavi.title = @"聊天";
     PersonalNavi.title = @"设置";
-  
+
     window.rootViewController = baseTabBar;
     [self.window makeKeyAndVisible];
+    
+    if([[MBUserConfig sharedInstance].mid isEqualToString:@""]){
+        MBLoginViewController *loginViewController = [MBLoginViewController new];
+        [baseTabBar presentViewController:loginViewController animated:YES completion:^{
+            
+        }];
+    }
 }
 
 - (void)setupEnv {

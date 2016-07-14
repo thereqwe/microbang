@@ -40,7 +40,7 @@
     NSDictionary *dict = @{@"action":@"getNewMsg",@"mid":[MBUserConfig sharedInstance].mid};
     [[HTTPService Instance] mobilePOST:SERVER_URL path:@"/responder.php" parameters:[dict mutableCopy] success:^(AFHTTPRequestOperation *operation, id responseObject) {
         isListening=NO;
-          [[FMDBService sharedInstance] executeUpdate:@"delete from mb_msg"];
+       //   [[FMDBService sharedInstance] executeUpdate:@"delete from mb_msg"];
         NSLog(@"%@",responseObject);
         for (NSDictionary *dict in responseObject[@"data"]) {
             NSString *from_mid = dict[@"from_mid"];
@@ -53,6 +53,9 @@
                 friend_mid = from_mid;
             }
             [msgModel insert:dict[@"msg"] from_mid:dict[@"from_mid"] create_time:dict[@"create_time"] to_mid:dict[@"to_mid"] friend_mid:friend_mid];
+        }
+        if([responseObject[@"data"] count]>0){
+            [[NSNotificationCenter defaultCenter] postNotificationName:kNewMsgIncoming object:nil];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         isListening=NO;
@@ -76,9 +79,9 @@
                                    NSArray *data = responseObject[@"data"];
                                    [[FMDBService sharedInstance] executeUpdate:@"delete from mb_friend"];
                                    for (NSDictionary *dict in data) {
-                                       
                                        [friendModel insertDB:dict[@"nickname"] friend_mid:dict[@"friend_mid"] create_time:dict[@"create_time"] avatar_url:dict[@"avatar_url"]];
                                    }
+                                  
                                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                                    
                                }];
@@ -94,17 +97,17 @@
         [self getAllFriend];
     });
     [self getNewMsg];
-//     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-//         while (YES) {
-//             if(isListening==NO){
-//                // [self getNewMsg];
-//                 NSLog(@"listiening....");
-//                 sleep(2);
-//             }else{
-//                 continue;
-//             }
-//         }
-//     });
+     dispatch_async(dispatch_get_global_queue(0, 0), ^{
+         while (YES) {
+             if(isListening==NO){
+                 [self getNewMsg];
+                 NSLog(@"listiening....");
+                 sleep(2);
+             }else{
+                 continue;
+             }
+         }
+     });
 
 }
 @end
