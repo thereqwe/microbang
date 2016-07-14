@@ -50,7 +50,7 @@
     window.rootViewController = baseTabBar;
     [self.window makeKeyAndVisible];
     
-    if([[MBUserConfig sharedInstance].mid isEqualToString:@""]){
+    if([[MBUserConfig sharedInstance].mid isEqualToString:@""]||[MBUserConfig sharedInstance].mid==nil){
         MBLoginViewController *loginViewController = [MBLoginViewController new];
         [baseTabBar presentViewController:loginViewController animated:YES completion:^{
             

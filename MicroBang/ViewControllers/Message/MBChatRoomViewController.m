@@ -81,12 +81,13 @@ UITableViewDataSource
 - (void)goTail
 {
     int idx = ([dataArr count]-1);
-    if (idx<0) {
-        idx=0;
-    }
-    [ui_table_chat scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]
+    if (idx<=0) {
+       
+    }else{
+        [ui_table_chat scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]
                          atScrollPosition:UITableViewScrollPositionBottom
                                  animated:NO];
+    }
 }
 
 - (void)setupUI
@@ -139,7 +140,7 @@ UITableViewDataSource
     int x = arc4random() % 1000;
     NSString *mid = [MBUserConfig sharedInstance].mid;
     NSString *to_mid = friend_mid;
-    msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@"<br>"];
+    msgStr = [msgStr stringByReplacingOccurrencesOfString:@"\r\n" withString:@""];
     NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@""];
     NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
     [socket sendData:data withTimeout:-1 tag:x];
@@ -148,6 +149,7 @@ UITableViewDataSource
     NSString *create_time = [formatter stringFromDate:[NSDate date]];
     [msgModel insert:msgStr from_mid:mid create_time:create_time to_mid:to_mid friend_mid:friend_mid];
     [self getMsgWithPage:0];
+    ui_tv_msg.text = @"";
 }
 
 - (void)setupData
@@ -167,12 +169,14 @@ UITableViewDataSource
 
 - (void)getMsgWithPage:(NSUInteger)page
 {
-    NSString *sql = [NSString stringWithFormat:@"select * from mb_msg where friend_mid=%@",friend_mid];
+    NSString *sql = [NSString stringWithFormat:@"select * from mb_msg as t1 left join mb_friend as t2 on t1.friend_mid = t2.friend_mid where t1.friend_mid=%@",friend_mid];
     FMResultSet *set=[[FMDBService sharedInstance] executeQuery:sql];
      [dataArr removeAllObjects];
     while ([set next]) {
         NSDictionary *dict =@{
-                              @"msg":[set stringForColumn:@"msg"]
+                              @"msg":[set stringForColumn:@"msg"],
+                              @"avatar_url":[set stringForColumn:@"avatar_url"],
+                              @"from_mid":[set stringForColumn:@"from_mid"]
         };
        
         [dataArr addObject:dict];
@@ -182,9 +186,6 @@ UITableViewDataSource
 }
 
 #pragma mark- socket delegate
-
-
-
 /**
  * Called when the datagram with the given tag has been sent.
  **/
@@ -205,10 +206,11 @@ UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MBChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    if(indexPath.row==19){
-        cell.contentView.backgroundColor = [UIColor redColor];
+    NSString *from_mid = dataArr[indexPath.row][@"from_mid"];
+    if([from_mid isEqualToString:[MBUserConfig sharedInstance].mid]){
+        cell.backgroundColor = [UIColor grayColor];
     }else{
-        cell.contentView.backgroundColor = [UIColor brownColor];
+        cell.backgroundColor = [UIColor lightGrayColor];
     }
     [cell setupDataWithDict:dataArr[indexPath.row]];
     return cell;
@@ -217,5 +219,10 @@ UITableViewDataSource
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.view.window endEditing:YES];
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

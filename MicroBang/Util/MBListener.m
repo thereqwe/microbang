@@ -96,7 +96,6 @@
     dispatch_once(&onceToken, ^{
         [self getAllFriend];
     });
-    [self getNewMsg];
      dispatch_async(dispatch_get_global_queue(0, 0), ^{
          while (YES) {
              if(isListening==NO){

@@ -12,4 +12,5 @@
 + (instancetype)sharedInstance;
 - (void)getNewMsg;
 - (void)startListen;
+- (void)getAllFriend;
 @end

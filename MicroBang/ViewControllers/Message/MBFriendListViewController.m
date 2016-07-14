@@ -11,6 +11,7 @@
 #import "HTTPService.h"
 #import "MBAddFriendViewController.h"
 #import "MBChatRoomViewController.h"
+#import "MBListener.h"
 @implementation MBFriendListViewController
 {
     UITableView *ui_table_friend;
@@ -31,6 +32,12 @@
         
         [dataArr addObject:dict];
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[MBListener sharedInstance] getAllFriend];
 }
 
 - (void)viewDidLoad
