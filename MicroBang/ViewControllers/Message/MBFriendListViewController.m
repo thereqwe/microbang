@@ -10,6 +10,7 @@
 #import "MBFriedndListTableViewCell.h"
 #import "HTTPService.h"
 #import "MBAddFriendViewController.h"
+#import "MBChatRoomViewController.h"
 @implementation MBFriendListViewController
 {
     UITableView *ui_table_friend;
@@ -76,5 +77,12 @@
     NSDictionary *dict = dataArr[indexPath.row];
     [cell setupData:dict];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *friend_mid =  dataArr[indexPath.row][@"friend_mid"];
+    MBChatRoomViewController *vc = [[MBChatRoomViewController alloc]initWithFriendMid:friend_mid];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

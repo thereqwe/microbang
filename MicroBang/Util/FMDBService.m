@@ -15,7 +15,7 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *path = [documentsDirectory stringByAppendingPathComponent:@"database"];
-    
+    NSLog(@"%@",path);
     static dispatch_once_t __singletonToken;
     static id __singleton__;
     dispatch_once( &__singletonToken, ^{ __singleton__ = [FMDatabase databaseWithPath:path]; } );

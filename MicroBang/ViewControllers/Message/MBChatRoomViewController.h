@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MBChatRoomViewController : UIViewController
-
+-(instancetype)initWithFriendMid:(NSString*)_friendMid;
 @end

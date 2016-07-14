@@ -74,5 +74,6 @@
     [ui_lb_name setText:dict[@"nickname"]];
     [ui_lb_msg setText:dict[@"msg"]];
     [ui_lb_pubilic_time setText:dict[@"create_time"]];
+    _friend_mid = dict[@"friend_mid"];
 }
 @end

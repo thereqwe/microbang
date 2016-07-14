@@ -47,7 +47,8 @@
         NSString *avatar_url = [set stringForColumn:@"avatar_url"];
         NSString *nickname = [set stringForColumn:@"nickname"];
         NSString *create_time = [set stringForColumn:@"create_time"];
-        [dataArr addObject:@{@"msg":msg,@"nickname":nickname,@"avatar_url":avatar_url,@"create_time":create_time}];
+        NSString *friend_mid = [set stringForColumn:@"friend_mid"];
+        [dataArr addObject:@{@"msg":msg,@"nickname":nickname,@"avatar_url":avatar_url,@"create_time":create_time,@"friend_mid":friend_mid}];
     }
     [ui_table_msg_list reloadData];
 }
@@ -112,7 +113,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    MBChatRoomViewController *chatRoomViewController = [MBChatRoomViewController new];
+    NSString *friend_mid = dataArr[indexPath.row][@"friend_mid"];
+    MBChatRoomViewController *chatRoomViewController = [[MBChatRoomViewController alloc]initWithFriendMid:friend_mid];
     chatRoomViewController.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:chatRoomViewController animated:YES];
 }

@@ -28,7 +28,7 @@
  */
 -(void)setupDataWithDict:(NSDictionary*)dict
 {
-    ui_lb_text.text = dict[@"text"];
+    ui_lb_text.text = dict[@"msg"];
 }
 
 - (void)setupUI

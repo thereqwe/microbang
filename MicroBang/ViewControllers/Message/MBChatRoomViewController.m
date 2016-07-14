@@ -25,10 +25,18 @@ UITableViewDataSource
     AsyncUdpSocket *socket;
     NSTimer *connectTimer;
     NSMutableArray *dataArr;
+    NSString *friend_mid;
 }
 @end
 
 @implementation MBChatRoomViewController
+
+-(instancetype)initWithFriendMid:(NSString*)_friendMid
+{
+    self = [super init];
+    friend_mid = _friendMid;
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -142,12 +150,19 @@ UITableViewDataSource
     socket = [SocketService sharedInstance];
     socket.delegate = self;
     dataArr = [NSMutableArray new];
-    [self getLocalChatHistoryWithPage:0];
+    [self getMsgWithPage:0];
 }
 
-- (void)getLocalChatHistoryWithPage:(NSUInteger)page
+- (void)getMsgWithPage:(NSUInteger)page
 {
-
+    NSString *sql = [NSString stringWithFormat:@"select * from mb_msg where friend_mid=%@",friend_mid];
+    FMResultSet *set=[[FMDBService sharedInstance] executeQuery:sql];
+    while ([set next]) {
+        NSDictionary *dict =@{
+                              @"msg":[set stringForColumn:@"msg"]
+        };
+        [dataArr addObject:dict];
+    }
 }
 
 #pragma mark- socket delegate
@@ -179,7 +194,7 @@ UITableViewDataSource
     }else{
         cell.contentView.backgroundColor = [UIColor brownColor];
     }
-    [cell setupDataWithDict:nil];
+    [cell setupDataWithDict:dataArr[indexPath.row]];
     return cell;
 }
 

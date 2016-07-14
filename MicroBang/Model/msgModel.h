@@ -12,6 +12,7 @@ typedef NS_ENUM(NSUInteger, MsgType) {
     msg_voice,
     msg_img
 };
+
 @interface msgModel : NSObject
 @property (nonatomic,strong)NSString *msg;
 @property (nonatomic,strong)NSString *create_time;

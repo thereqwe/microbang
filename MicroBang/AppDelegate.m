@@ -61,7 +61,7 @@
     /******************FMDB**********************/
     [[FMDBService sharedInstance] open];
     //msg
-    BOOL rst = [[FMDBService sharedInstance] executeUpdate:@"create table if not exists mb_msg(id integer primary key  autoincrement, msg text,from_mid varchar(256),to_mid varchar(256),create_time datetime)"];
+    BOOL rst = [[FMDBService sharedInstance] executeUpdate:@"create table if not exists mb_msg(id integer primary key  autoincrement, msg text,friend_mid varchar(256),from_mid varchar(256),to_mid varchar(256),create_time datetime)"];
     //friend
     BOOL rst2 = [[FMDBService sharedInstance] executeUpdate:@"create table if not exists mb_friend(id integer primary key  autoincrement, nickname varchar(256),friend_mid varchar(256),avatar_url varchar(1024) ,create_time datetime)"];
     if (rst&&rst2) {
