@@ -75,6 +75,16 @@
     if (rst&&rst2) {
         NSLog(@"FMDB 初始化成功");
     }
+    
+    
+    
+    NSDate *date = [NSDate date];
+    NSDateFormatter *fmt = [[NSDateFormatter alloc]init];
+    fmt.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    NSString *str = [fmt stringFromDate:date];
+    UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"提示" message:str delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil];
+    [alert show];
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

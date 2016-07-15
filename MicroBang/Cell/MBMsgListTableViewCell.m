@@ -27,6 +27,8 @@
 
 - (void)setupUI
 {
+    self.backgroundColor = FOGCOLOR;
+    [self setRoundCorner];
     ui_view_container = [UIView new];
     [self.contentView addSubview:ui_view_container];
     [ui_view_container mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,7 +56,7 @@
     [ui_lb_msg mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(ui_img_avatar.mas_right).offset(8);
         make.right.equalTo(ui_view_container);
-        make.top.equalTo(ui_lb_name.mas_bottom).offset(20);
+        make.top.equalTo(ui_lb_name.mas_bottom).offset(8);
     }];
     
     ui_lb_pubilic_time = [UILabel new];

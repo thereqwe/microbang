@@ -100,7 +100,7 @@ UITableViewDataSource
     }];
     
     ui_btn_send = [UIButton new];
-    [ui_btn_send setTitle:@"send" forState:UIControlStateNormal];
+    [ui_btn_send setTitle:@"发送" forState:UIControlStateNormal];
     [ui_view_input_bar addSubview:ui_btn_send];
     [ui_btn_send mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(ui_view_input_bar);
@@ -108,7 +108,7 @@ UITableViewDataSource
         make.width.mas_equalTo(60);
         make.height.mas_equalTo(44);
     }];
-    ui_btn_send.backgroundColor = [UIColor redColor];
+    ui_btn_send.backgroundColor = GREENCOLOR;
     [ui_btn_send addTarget:self action:@selector(sendMsg) forControlEvents:UIControlEventTouchUpInside];
     
     ui_tv_msg = [UITextView new];
@@ -120,6 +120,7 @@ UITableViewDataSource
     }];
     
     ui_table_chat = [UITableView new];
+    ui_table_chat.separatorStyle = UITableViewCellSeparatorStyleNone;
     [ui_table_chat registerClass:[MBChatTableViewCell class] forCellReuseIdentifier:@"cell"];
     ui_table_chat.delegate = self;
     ui_table_chat.dataSource = self;
@@ -127,7 +128,8 @@ UITableViewDataSource
     ui_table_chat.rowHeight=UITableViewAutomaticDimension;
     [self.view addSubview:ui_table_chat];
     [ui_table_chat mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
+        make.left.mas_equalTo(2);
+        make.right.mas_equalTo(-2);
         make.top.mas_equalTo(64);
         make.bottom.equalTo(ui_view_input_bar.mas_top);
     }];
@@ -144,12 +146,12 @@ UITableViewDataSource
     NSString *socketStr = [NSString stringWithFormat:@"{\"msg\":\"%@\",\"mid\":\"%@\",\"to_mid\":\"%@\"}%@",msgStr,mid,to_mid,@""];
     NSData *data = [socketStr dataUsingEncoding:NSUTF8StringEncoding];
     [socket sendData:data withTimeout:-1 tag:x];
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    NSString *create_time = [formatter stringFromDate:[NSDate date]];
+    NSString *create_time = [NSDate now];
+    
     [msgModel insert:msgStr from_mid:mid create_time:create_time to_mid:to_mid friend_mid:friend_mid];
     [self getMsgWithPage:0];
     ui_tv_msg.text = @"";
+    [[NSNotificationCenter defaultCenter]postNotificationName:kNewMsgIncoming object:nil];
 }
 
 - (void)setupData
@@ -178,7 +180,6 @@ UITableViewDataSource
                               @"avatar_url":[set stringForColumn:@"avatar_url"],
                               @"from_mid":[set stringForColumn:@"from_mid"]
         };
-       
         [dataArr addObject:dict];
     }
     [ui_table_chat reloadData];
@@ -208,9 +209,9 @@ UITableViewDataSource
     MBChatTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     NSString *from_mid = dataArr[indexPath.row][@"from_mid"];
     if([from_mid isEqualToString:[MBUserConfig sharedInstance].mid]){
-        cell.backgroundColor = [UIColor grayColor];
+        cell.backgroundColor = WHITECOLOR;
     }else{
-        cell.backgroundColor = [UIColor lightGrayColor];
+        cell.backgroundColor = WHITECOLOR;
     }
     [cell setupDataWithDict:dataArr[indexPath.row]];
     return cell;

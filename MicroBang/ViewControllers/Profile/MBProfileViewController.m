@@ -14,6 +14,7 @@
     UIButton *ui_btn_avatar;
     UITextField *ui_tf_nickname;
     UIButton *ui_btn_ok;
+    UIButton *ui_btn_logout;
     NSString *avatar_url;
     UIImagePickerController *imagePickerController;
 }
@@ -53,7 +54,7 @@
 //    ui_btn_avatar.backgroundColor = [UIColor redColor];
     [self.view addSubview:ui_btn_avatar];
     [ui_btn_avatar addTarget:self action:@selector(doEditAvatar) forControlEvents:UIControlEventTouchUpInside];
-    ui_btn_avatar.layer.borderWidth = 1;
+//    ui_btn_avatar.layer.borderWidth = 1;
     [ui_btn_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(ws.view);
         make.width.height.mas_equalTo(100);
@@ -61,18 +62,20 @@
     }];
     
     ui_tf_nickname = [UITextField new];
+    ui_tf_nickname.placeholder = @"请输入昵称";
     ui_tf_nickname.layer.borderWidth = 0.5;
+    ui_tf_nickname.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:ui_tf_nickname];
     [ui_tf_nickname mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(ui_btn_avatar.mas_bottom).offset(10);
-        make.height.mas_equalTo(44);
+        make.height.mas_equalTo(30);
         make.left.mas_equalTo(20);
         make.right.mas_equalTo(-20);
     }];
     
     ui_btn_ok = [UIButton new];
     [ui_btn_ok setTitle:@"确定" forState:UIControlStateNormal];
-    ui_btn_ok.backgroundColor = [UIColor blueColor];
+    ui_btn_ok.backgroundColor = PURPLECOLOR;
     [self.view addSubview:ui_btn_ok];
     [ui_btn_ok addTarget:self action:@selector(doEditProfile) forControlEvents:UIControlEventTouchUpInside];
     [ui_btn_ok mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -82,6 +85,18 @@
         make.centerX.equalTo(ws.view);
     }];
     
+    ui_btn_logout = [UIButton new];
+    ui_btn_logout.backgroundColor = [UIColor redColor];
+    [self.view addSubview:ui_btn_logout];
+    [ui_btn_logout setTitle:@"登出" forState:UIControlStateNormal];
+    [ui_btn_logout addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
+    [ui_btn_logout mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(ui_btn_ok.mas_bottom).offset(10);
+        make.width.mas_equalTo(100);
+        make.height.mas_equalTo(44);
+        make.centerX.equalTo(ws.view);
+    }];
+
 }
 
 - (void)doEditAvatar
@@ -124,7 +139,6 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
        // NSLog(@"%@",[[NSString alloc]initWithData:data encoding:kCFStringEncodingUTF8]);
         if([responseObject[@"errCode"] isEqualToString:@"000"]){
             avatar_url = responseObject[@"avatar_url"];
-            avatar_url = [NSString stringWithFormat:@"%@%@",SERVER_URL,avatar_url];
             [ui_btn_avatar sd_setImageWithURL:[NSURL URLWithString:avatar_url] forState:UIControlStateNormal];
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

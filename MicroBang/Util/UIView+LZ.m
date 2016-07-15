@@ -73,6 +73,10 @@
     [self.layer addAnimation:animation forKey:nil];
 }
 
-
+- (void)setRoundCorner
+{
+    self.layer.cornerRadius = 4;
+    self.layer.masksToBounds = YES;
+}
 
 @end

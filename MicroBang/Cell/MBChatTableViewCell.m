@@ -33,8 +33,12 @@
     NSString *from_mid = dict[@"from_mid"];
     if([from_mid isEqualToString:[MBUserConfig sharedInstance].mid]){
         [ui_img_avatar sd_setImageWithURL:[MBUserConfig sharedInstance].avatar_url];
+        ui_lb_text.backgroundColor = PURPLECOLOR;
+        [ui_lb_text setRoundCorner];
     }else{
         [ui_img_avatar sd_setImageWithURL:[NSURL URLWithString:dict[@"avatar_url"]]];
+        ui_lb_text.backgroundColor = FOGCOLOR;
+        [ui_lb_text setRoundCorner];
     }
 }
 
@@ -46,13 +50,13 @@
     [ui_img_avatar mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.equalTo(ws.contentView);
         make.left.mas_equalTo(8);
-        make.width.mas_equalTo(20);
-        make.height.mas_equalTo(20);
+        make.width.mas_equalTo(30);
+        make.height.mas_equalTo(30);
+//        make.bottom.mas_equalTo(-8);
     }];
     
-    
     ui_lb_text = [UILabel new];
-    ui_lb_text.numberOfLines = 0;
+    ui_lb_text.numberOfLines = 10;
     ui_lb_text.text = @"123123123123123ffdsafasdfasdfasdfasdfsdfsdfdsfdsfdsfdsfdsf";
     [self.contentView addSubview:ui_lb_text];
     [ui_lb_text mas_makeConstraints:^(MASConstraintMaker *make) {

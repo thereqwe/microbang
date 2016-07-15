@@ -22,7 +22,6 @@
     self = [super init];
     if (self) {
         self.title = @"消息";
-        self.view.backgroundColor = [UIColor redColor];
     }
     return self;
 }
@@ -48,7 +47,7 @@
 
 - (void)getMsg
 {
-    NSString *sql = @"select * from (select * from mb_msg order by create_time desc) as t1 left join mb_friend as t2 on t1.from_mid = t2.friend_mid  group by t1.from_mid having nickname is not null order by t1.create_time desc";
+    NSString *sql = @"select *,t1.create_time from (select * from mb_msg order by create_time asc) as t1 left join mb_friend as t2 on t1.friend_mid = t2.friend_mid  group by t1.friend_mid having nickname is not null order by t1.create_time desc";
     FMResultSet *set = [[FMDBService sharedInstance] executeQuery:sql];
     NSLog(@"%@",[FMDBService sharedInstance].lastErrorMessage);
     NSLog(@"%@",[FMDBService sharedInstance].lastError);
@@ -80,18 +79,17 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:logBtn];
     [logBtn addTarget:self action:@selector(login) forControlEvents:UIControlEventTouchUpInside];
     
-    
-    
     ui_table_msg_list = [UITableView new];
+    ui_table_msg_list.separatorStyle = UITableViewCellSeparatorStyleNone;
     ui_table_msg_list.delegate = self;
     ui_table_msg_list.dataSource = self;
     ui_table_msg_list.rowHeight = 44*2;
-    ui_table_msg_list.backgroundColor = [UIColor brownColor];
     [ui_table_msg_list registerClass:[MBMsgListTableViewCell class] forCellReuseIdentifier:@"cell"];
     [self.view addSubview:ui_table_msg_list];
     [ui_table_msg_list mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(0);
-        make.top.mas_equalTo(0);
+        make.left.mas_equalTo(2);
+        make.right.mas_equalTo(-2);
+        make.top.mas_equalTo(2);
         make.bottom.mas_equalTo(0);
     }];
 }

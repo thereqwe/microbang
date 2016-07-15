@@ -33,7 +33,6 @@
         [dataArr addObject:dict];
     }
 }
-
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -62,7 +61,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:friendBtn];
     [friendBtn addTarget:self action:@selector(goToAddFriend) forControlEvents:UIControlEventTouchUpInside];
     ui_table_friend = [UITableView new];
-    ui_table_friend.backgroundColor = [UIColor brownColor];
+    ui_table_friend.separatorStyle = UITableViewCellSeparatorStyleNone;
+    ui_table_friend.backgroundColor = [UIColor whiteColor];
     ui_table_friend.delegate = self;
     ui_table_friend.dataSource = self;
     ui_table_friend.rowHeight = 44*2;
