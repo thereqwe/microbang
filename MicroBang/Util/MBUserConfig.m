@@ -22,6 +22,14 @@
     return __singleton__;
 }
 
+- (void)logOut
+{
+    NSString*appDomain = [[NSBundle mainBundle]bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults]removePersistentDomainForName:appDomain];
+    [[FMDBService sharedInstance] executeUpdate:@"truncate table mb_msg"];
+    [[FMDBService sharedInstance] executeUpdate:@"truncate table mb_friend"];
+}
+
 - (void)setMid:(NSString *)_mid
 {
     [[NSUserDefaults standardUserDefaults] setObject:_mid forKey:@"mid"];

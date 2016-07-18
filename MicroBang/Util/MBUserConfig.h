@@ -13,4 +13,5 @@
 @property (nonatomic,copy)NSString *nickname;
 @property (nonatomic,copy)NSString *avatar_url;
 + (instancetype)sharedInstance;
+- (void)logOut;
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "MBProfileViewController.h"
-//#import "HTTPService.h"
+#import "MBLoginViewController.h"
 #import <SDWebImage/UIButton+WebCache.h>
 @interface MBProfileViewController ()<UIImagePickerControllerDelegate>
 {
@@ -26,6 +26,11 @@
     [super viewDidLoad];
     self.title = @"设置";
     [self setupUI];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     [self setupData];
 }
 
@@ -162,5 +167,11 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }];
 }
 
-
+- (void)logout
+{
+    [[MBUserConfig sharedInstance] logOut];
+    MBLoginViewController *vc = [MBLoginViewController new];
+    [self presentViewController:vc animated:YES completion:^{
+    }];
+}
 @end
